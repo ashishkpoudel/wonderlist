@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('login', [UserController::class, 'login'])->name('users.login');
+Route::post('register', [UserController::class, 'register'])->name('users.register');
+Route::get('me', [UserController::class, 'me'])->name('users.me');
+Route::post('logout', [UserController::class, 'logout'])->name('users.logout');
+

@@ -4,8 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "33bed5b25acd7ec9118225ecec98d6d2",
     "packages": [
+        {
+            "name": "akp/slugify",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ashishkpoudel/laravel-slugify.git",
+                "reference": "23f8d7ac8a239e3577a7907d75cd5c51651edf2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ashishkpoudel/laravel-slugify/zipball/23f8d7ac8a239e3577a7907d75cd5c51651edf2c",
+                "reference": "23f8d7ac8a239e3577a7907d75cd5c51651edf2c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Akp\\Slugify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashish K Poudel",
+                    "email": "routeasis@gmail.com"
+                }
+            ],
+            "description": "Slug generation package for laravel",
+            "keywords": [
+                "laravel",
+                "slug"
+            ],
+            "time": "2019-08-10T16:54:58+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -4653,7 +4690,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "akp/slugify": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
