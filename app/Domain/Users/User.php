@@ -14,8 +14,6 @@ class User extends Authenticatable
 
     protected $table = self::TABLE;
 
-    protected $guarded = [];
-
     protected $hidden = [
         'api_token', 'password', 'remember_token',
     ];

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Users\Requests;
+namespace App\Http\Requests;
 
-use App\Domain\Users\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use App\Domain\Users\{DTO\UserData, User};
 
 class UserRegisterRequest extends FormRequest
 {
@@ -31,5 +31,13 @@ class UserRegisterRequest extends FormRequest
             'password' => ['required', 'min:6', 'confirmed'],
             'password_confirmation' => ['required', 'min:6'],
         ];
+    }
+
+    public function userData(): UserData
+    {
+        return (new UserData)
+            ->setName($this->input('name'))
+            ->setEmail($this->input('email'))
+            ->setPassword($this->input('password'));
     }
 }

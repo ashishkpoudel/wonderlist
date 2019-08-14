@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Domain\Users\User;
-use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
-use App\Domain\Users\Requests\UserLoginRequest;
-use App\Domain\Users\Requests\UserRegisterRequest;
-use App\Domain\Users\Actions\UserLoginAction;
-use App\Domain\Users\Actions\UserRegisterAction;
+use App\Http\Requests\UserLoginRequest;
+use App\Http\Requests\UserRegisterRequest;
+use App\Http\Resources\UserResource;
+use App\Domain\Users\Actions\UserLogin;
+use App\Domain\Users\Actions\UserRegister;
 
 class UserController extends Controller
 {
@@ -19,16 +18,16 @@ class UserController extends Controller
 
     public function login(UserLoginRequest $request)
     {
-        $user = dispatch_now(new UserLoginAction($request->validated()));
+        $user = (new UserLogin)->execute($request->userData());
 
         if (null !== $user) {
             return response(['api_token' => $user->api_token]);
         }
     }
 
-    public function register(UserRegisterRequest $request)
+    public function register(UserRegisterRequest $request, UserRegister $userRegister)
     {
-        $user = dispatch_now(new UserRegisterAction($request->validated()));
+        $user = $userRegister->execute($request->userData());
 
         return UserResource::make($user);
     }

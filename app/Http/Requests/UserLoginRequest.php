@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Domain\Users\Requests;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use App\Domain\Users\{DTO\UserData, User};
 
 class UserLoginRequest extends FormRequest
 {
@@ -27,5 +28,12 @@ class UserLoginRequest extends FormRequest
             'email' => ['required', 'email'],
             'password' => ['required']
         ];
+    }
+
+    public function userData(): UserData
+    {
+        return (new UserData)
+            ->setEmail($this->input('email'))
+            ->setPassword($this->input('password'));
     }
 }

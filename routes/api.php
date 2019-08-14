@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EntryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::post('register', [UserController::class, 'register'])->name('users.regist
 Route::get('me', [UserController::class, 'me'])->name('users.me');
 Route::post('logout', [UserController::class, 'logout'])->name('users.logout');
 
+Route::post('entries', [EntryController::class, 'store'])->name('entries.store');
+Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entries.update');
+Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');
