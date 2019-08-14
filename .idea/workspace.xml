@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="" />
+    <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/phpunit.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,11 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.EntryTest.user_can_update_their_entry">
-    <configuration name="EntryTest.admin_can_create_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="admin_can_create_entry" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.UserTest.user_can_login">
     <configuration name="EntryTest.user_can_create_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_can_create_entry" scope="Method" />
       <method v="2" />
@@ -172,13 +174,17 @@
       <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_cannot_delete_entry_which_dont_belong_to_them" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="UserTest.user_can_login" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="user_can_login" scope="Method" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserTest.user_can_login" />
         <item itemvalue="PHPUnit.EntryTest.user_can_update_their_entry" />
         <item itemvalue="PHPUnit.EntryTest.user_cannot_delete_entry_which_dont_belong_to_them" />
         <item itemvalue="PHPUnit.EntryTest.user_can_delete_their_entry" />
         <item itemvalue="PHPUnit.EntryTest.user_can_create_entry" />
-        <item itemvalue="PHPUnit.EntryTest.admin_can_create_entry" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +201,7 @@
       <workItem from="1565525373686" duration="20152000" />
       <workItem from="1565619458930" duration="12836000" />
       <workItem from="1565699331457" duration="10690000" />
-      <workItem from="1565789574047" duration="2200000" />
+      <workItem from="1565789574047" duration="2776000" />
     </task>
     <servers />
   </component>
