@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,26 +122,17 @@
       <path value="$PROJECT_DIR$/vendor/orchestra/testbench-core" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/php.xml" />
-        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/php-test-framework.xml" />
-        <option value="$PROJECT_DIR$/.idea/wonderlist.app.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectId" id="1PHK2D4fLeIbtqKXHYxh3X1xfU9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/Client/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,21 +146,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.UserTest.user_can_login">
-    <configuration name="EntryTest.user_can_create_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_can_create_entry" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="EntryTest.user_can_delete_their_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_can_delete_their_entry" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.UserTest.authenticated_user_can_get_their_info">
     <configuration name="EntryTest.user_can_update_their_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_can_update_their_entry" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="EntryTest.user_cannot_delete_entry_which_dont_belong_to_them" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_cannot_delete_entry_which_dont_belong_to_them" scope="Method" />
+    <configuration name="UserTest.authenticated_user_can_get_their_info" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_get_their_info" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.authenticated_user_can_logout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_logout" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.guest_can_register_a_user_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="guest_can_register_a_user_account" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UserTest.user_can_login" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -180,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserTest.authenticated_user_can_get_their_info" />
         <item itemvalue="PHPUnit.UserTest.user_can_login" />
+        <item itemvalue="PHPUnit.UserTest.authenticated_user_can_logout" />
+        <item itemvalue="PHPUnit.UserTest.guest_can_register_a_user_account" />
         <item itemvalue="PHPUnit.EntryTest.user_can_update_their_entry" />
-        <item itemvalue="PHPUnit.EntryTest.user_cannot_delete_entry_which_dont_belong_to_them" />
-        <item itemvalue="PHPUnit.EntryTest.user_can_delete_their_entry" />
-        <item itemvalue="PHPUnit.EntryTest.user_can_create_entry" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +190,7 @@
       <workItem from="1565525373686" duration="20152000" />
       <workItem from="1565619458930" duration="12836000" />
       <workItem from="1565699331457" duration="10690000" />
-      <workItem from="1565789574047" duration="2776000" />
+      <workItem from="1565789574047" duration="6489000" />
     </task>
     <servers />
   </component>
