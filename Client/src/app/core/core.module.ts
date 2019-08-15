@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
-import { HttpTokenInterceptor } from 'src/app/core';
+import { HttpTokenInterceptor } from './interceptors';
 
 import {
   JwtService,
+  UserService,
   ApiService,
   AuthGuardService,
 } from './services';
@@ -19,6 +20,7 @@ import {
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
     JwtService,
+    UserService,
     ApiService,
     AuthGuardService
   ]

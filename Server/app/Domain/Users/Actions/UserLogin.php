@@ -12,10 +12,12 @@ class UserLogin
     {
         $attempt = Auth::attempt(['email' => $userData->email, 'password' => $userData->password]);
 
-        if (true === $attempt) {
+        if (true=== $attempt) {
             $user = Auth::user();
             $user->generateApiToken();
             return $user;
         }
+
+        return null;
     }
 }

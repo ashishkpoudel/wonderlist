@@ -66,6 +66,7 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Cors\\' => 12,
         ),
         'R' => 
         array (
@@ -257,6 +258,10 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Cors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-cors/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -425,8 +430,10 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'Akp\\Slugify\\HasSlug' => __DIR__ . '/..' . '/akp/slugify/src/HasSlug.php',
         'Akp\\Slugify\\SlugBuilder' => __DIR__ . '/..' . '/akp/slugify/src/SlugBuilder.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
-        'App\\Domain\\Entries\\Actions\\CreateEntryAction' => __DIR__ . '/../..' . '/app/Domain/Entries/Actions/CreateEntry.php',
+        'App\\Domain\\Entries\\Actions\\CreateEntry' => __DIR__ . '/../..' . '/app/Domain/Entries/Actions/CreateEntry.php',
+        'App\\Domain\\Entries\\Actions\\DeleteEntry' => __DIR__ . '/../..' . '/app/Domain/Entries/Actions/DeleteEntry.php',
         'App\\Domain\\Entries\\Actions\\UpdateEntry' => __DIR__ . '/../..' . '/app/Domain/Entries/Actions/UpdateEntry.php',
+        'App\\Domain\\Entries\\AuthPolicies\\EntryPolicy' => __DIR__ . '/../..' . '/app/Domain/Entries/AuthPolicies/EntryPolicy.php',
         'App\\Domain\\Entries\\DTO\\EntryData' => __DIR__ . '/../..' . '/app/Domain/Entries/DTO/EntryData.php',
         'App\\Domain\\Entries\\Entry' => __DIR__ . '/../..' . '/app/Domain/Entries/Entry.php',
         'App\\Domain\\Users\\Actions\\UserLogin' => __DIR__ . '/../..' . '/app/Domain/Users/Actions/UserLogin.php',
@@ -455,6 +462,7 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'App\\Http\\Requests\\UserRegisterRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserRegisterRequest.php',
         'App\\Http\\Resources\\EntryResource' => __DIR__ . '/../..' . '/app/Http/Resources/EntryResource.php',
         'App\\Http\\Resources\\UserResource' => __DIR__ . '/../..' . '/app/Http/Resources/UserResource.php',
+        'App\\Policies\\DemoPolicy' => __DIR__ . '/../..' . '/app/Policies/DemoPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -533,6 +541,7 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'DevDatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DevDatabaseSeeder/DevDatabaseSeeder.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
         'Doctrine\\Instantiator\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/ExceptionInterface.php',
@@ -627,6 +636,7 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator/Warning/Warning.php',
+        'EntrySeeder' => __DIR__ . '/../..' . '/database/seeds/EntrySeeder.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',
         'Faker\\Calculator\\Luhn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Luhn.php',
@@ -3953,6 +3963,11 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Cors\\Cors' => __DIR__ . '/..' . '/spatie/laravel-cors/src/Cors.php',
+        'Spatie\\Cors\\CorsProfile\\CorsProfile' => __DIR__ . '/..' . '/spatie/laravel-cors/src/CorsProfile/CorsProfile.php',
+        'Spatie\\Cors\\CorsProfile\\DefaultProfile' => __DIR__ . '/..' . '/spatie/laravel-cors/src/CorsProfile/DefaultProfile.php',
+        'Spatie\\Cors\\CorsServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-cors/src/CorsServiceProvider.php',
+        'Spatie\\Cors\\Exceptions\\InvalidCorsProfile' => __DIR__ . '/..' . '/spatie/laravel-cors/src/Exceptions/InvalidCorsProfile.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
@@ -4656,6 +4671,7 @@ class ComposerStaticInit59c3032c4f589cf90439d4d0f6dabc82
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'UserSeeder' => __DIR__ . '/../..' . '/database/seeds/UserSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',

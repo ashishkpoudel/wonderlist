@@ -8,7 +8,7 @@ use App\Domain\Entries\Entry;
 
 $factory->define(Entry::class, function (Faker $faker) {
     return [
-        'title' => $faker->title,
+        'title' => $faker->sentence,
         'body' => $faker->text,
     ];
 });

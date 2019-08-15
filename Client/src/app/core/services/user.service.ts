@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, ReplaySubject } from 'rxjs';
 import { map, distinctUntilChanged } from 'rxjs/operators';
 
-import { ApiService } from 'src/app/core';
-import { JwtService } from 'src/app/core';
-import { User } from 'src/app/core';
+import { ApiService } from './api.service';
+import { JwtService } from './jwt.service';
+import { User } from '../models';
 
 @Injectable()
 export class UserService {
@@ -20,9 +20,15 @@ export class UserService {
     private apiService: ApiService
   ) {}
 
-  setAuth(user: User) {
+  private setAuth(user: User) {
     this.currentUserSubject.next(user);
     this.isAuthenticatedSubject.next(true);
+  }
+
+  private purgeAuth() {
+    this.jwtService.removeToken();
+    this.currentUserSubject.next({} as User);
+    this.isAuthenticatedSubject.next(false);
   }
 
   // Verify JWT in localstorage with server & load user's info.
@@ -43,7 +49,7 @@ export class UserService {
     return this.apiService.post('/login', {'email': email, 'password': password})
       .pipe(map(
         data => {
-          this.jwtService.saveToken(data.token);
+          this.jwtService.saveToken(data.api_token);
           this.populate();
         }
       ));
@@ -53,9 +59,7 @@ export class UserService {
     return this.currentUserSubject.value;
   }
 
-  purgeAuth() {
-    this.jwtService.removeToken();
-    this.currentUserSubject.next({} as User);
-    this.isAuthenticatedSubject.next(false);
+  logout() {
+    this.purgeAuth();
   }
 }

@@ -23,6 +23,8 @@ class UserController extends Controller
         if (null !== $user) {
             return response(['api_token' => $user->api_token]);
         }
+
+        return response(null, 401);
     }
 
     public function register(UserRegisterRequest $request, UserRegister $userRegister)
