@@ -6,10 +6,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material.module';
 
 import { CoreModule } from './core';
 import { AuthModule } from './components/auth';
 import { ManageModule } from './components/manage';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +23,12 @@ import { ManageModule } from './components/manage';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
     CoreModule,
     AuthModule,
     ManageModule,
+    MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

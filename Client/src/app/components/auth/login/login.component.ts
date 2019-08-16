@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 import { UserService} from 'src/app/core';
 
@@ -17,7 +19,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private snackBar: MatSnackBar,
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -26,8 +30,14 @@ export class LoginComponent implements OnInit {
   login() {
     const login = this.loginForm.value;
     this.userService.login(login.email, login.password).subscribe(
-      data => {  },
-      error => { alert('Invalid login'); }
+      data => { this.router.navigate(['manage']); },
+      error => {
+        this.snackBar.open('Invalid login', '', {
+          duration: 800,
+          verticalPosition: 'top',
+          horizontalPosition: 'right'
+        });
+      }
     );
   }
 
