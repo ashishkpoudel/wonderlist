@@ -20,6 +20,7 @@ Route::post('register', [UserController::class, 'register'])->name('users.regist
 Route::get('me', [UserController::class, 'me'])->name('users.me');
 Route::post('logout', [UserController::class, 'logout'])->name('users.logout');
 
+Route::get('entries', [EntryController::class, 'index'])->name('entries.index');
 Route::post('entries', [EntryController::class, 'store'])->name('entries.store');
 Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entries.update');
 Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');

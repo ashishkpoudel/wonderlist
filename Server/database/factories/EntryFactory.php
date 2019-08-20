@@ -9,7 +9,7 @@ use App\Domain\Entries\Entry;
 $factory->define(Entry::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
-        'body' => $faker->text,
+        'body' => $faker->text(250),
     ];
 });
 

@@ -1,4 +1,5 @@
 export class User {
+  id: number;
   name: string;
   email: string;
   password: string;
@@ -6,6 +7,7 @@ export class User {
 
   static fromJson(data: any) {
     const user = new User();
+    user.id = data.id;
     user.name = data.name;
     user.email = data.email;
     user.password = data.password;

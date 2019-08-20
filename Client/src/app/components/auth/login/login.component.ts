@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
 
 import { UserService} from 'src/app/core';
 
@@ -25,6 +26,11 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.userService.isAuthenticated.pipe(take(1)).subscribe(data => {
+      if (true === data) {
+        this.router.navigateByUrl('manage');
+      }
+    });
   }
 
   login() {

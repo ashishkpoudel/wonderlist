@@ -8,6 +8,7 @@ import {
   JwtService,
   UserService,
   ApiService,
+  EntryService,
   AuthGuardService,
 } from './services';
 
@@ -22,6 +23,7 @@ import {
     JwtService,
     UserService,
     ApiService,
+    EntryService,
     AuthGuardService
   ]
 })
