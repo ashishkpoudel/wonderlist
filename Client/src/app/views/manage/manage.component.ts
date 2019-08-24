@@ -30,7 +30,7 @@ export class ManageComponent implements OnInit {
     });
 
     this.entryForm.valueChanges.subscribe(() => {
-      this.entryService.update(this.entry, this.entryForm.value)
+      this.entryService.update(this.entry.id, this.entryForm.value)
         .subscribe();
     });
   }

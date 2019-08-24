@@ -2,7 +2,6 @@
 
 namespace App\Domain\Entries\Actions;
 
-use App\Domain\Users\User;
 use App\Domain\Entries\{DTO\EntryData, Entry};
 
 class CreateEntry

@@ -1,0 +1,30 @@
+<div>
+
+  <div [formGroup]="entryForm" class="row">
+    <div class="col">
+
+      <mat-card class="mat-elevation-z0 p-0">
+        <mat-card-content>
+          <mat-form-field class="w-100" floatLabel="never">
+            <input matInput (keyup.enter)="body.focus()" placeholder="Title" formControlName="title" class="title">
+          </mat-form-field>
+          <mat-form-field class="w-100" floatLabel="never">
+            <textarea matInput placeholder="Text" formControlName="body" #body class="body"></textarea>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-between">
+          <div>
+            <button mat-flat-button><mat-icon>add_photo_alternate</mat-icon></button>
+          </div>
+          <div>
+            <button mat-stroked-button>Save Draft</button>
+            <button mat-raised-button color="primary" (click)="updateEntryClicked()" *ngIf="entry">Update</button>
+            <button mat-raised-button color="primary" (click)="saveEntryClicked()" *ngIf="! entry">Post</button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </div>
+
+</div>

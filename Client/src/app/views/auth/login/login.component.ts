@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   login() {
     const login = this.loginForm.value;
     this.userService.login(login.email, login.password).subscribe(
-      data => { this.router.navigate(['manage']); },
+      data => { this.router.navigate(['manage/entries']); },
       error => {
         this.snackBar.open('Invalid login', '', {
           duration: 800,

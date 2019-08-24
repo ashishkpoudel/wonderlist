@@ -1,0 +1,22 @@
+.entry-card {
+  cursor: pointer;
+}
+
+.timeline-entry-create .title {
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  line-height: 45px;
+  font-weight: 300;
+  outline: none;
+  border-width: 0;
+}
+
+.timeline-entry-create .body {
+  outline: none;
+  border-width: 0;
+  background: #fff;
+  font-size: 15px;
+  width: 100%;
+  height: 200px;
+}

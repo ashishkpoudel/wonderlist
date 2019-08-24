@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 
 import { CoreModule } from './core';
-import { AuthModule } from './components/auth';
-import { ManageModule } from './components/manage';
+import { AuthModule } from './views/auth';
+import { ManageModule } from './views/manage';
 
 
 @NgModule({

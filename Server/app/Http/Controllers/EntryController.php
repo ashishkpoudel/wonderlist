@@ -34,6 +34,13 @@ class EntryController extends Controller
         return EntryResource::make($entry);
     }
 
+    public function show($id)
+    {
+        $entry = Entry::findOrFail($id);
+
+        return EntryResource::make($entry);
+    }
+
     public function update($id, EntryRequest $request, UpdateEntry $updateEntry)
     {
         $entry = Entry::findOrFail($id);

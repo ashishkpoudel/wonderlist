@@ -7,7 +7,10 @@ import { Entry } from '../models';
 
 @Injectable()
 export class EntryService {
-  constructor(private apiService: ApiService) {}
+
+  constructor(
+    private apiService: ApiService
+  ) {}
 
   getAll(): Observable<Entry[]> {
     return this.apiService.get('/entries').pipe(
@@ -17,15 +20,31 @@ export class EntryService {
     );
   }
 
-  update(entry: Entry, data: object = {}): Observable<Entry> {
-    return this.apiService.patch(`/entries/${entry.id}`, data).pipe(
+  get(id: number|string): Observable<Entry> {
+    return this.apiService.get(`/entries/${id}`).pipe(
       map(response => {
         return Entry.fromJson(response.data);
       })
     );
   }
 
-  delete(entry: Entry) {
+  save(data: object = {}): Observable<Entry> {
+    return this.apiService.post(`/entries`, data).pipe(
+      map(response => {
+        return Entry.fromJson(response.data);
+      })
+    );
+  }
+
+  update(id: number|string, data: object = {}): Observable<Entry> {
+    return this.apiService.patch(`/entries/${id}`, data).pipe(
+      map(response => {
+        return Entry.fromJson(response.data);
+      })
+    );
+  }
+
+  delete(entry: Entry): Observable<any> {
     return this.apiService.delete(`/entries/${entry.id}`);
   }
 }
