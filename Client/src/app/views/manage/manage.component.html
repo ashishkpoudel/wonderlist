@@ -1,17 +1,19 @@
-<div class="row mb-4">
-  <div class="col">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        Wonderlist
-      </mat-toolbar-row>
-    </mat-toolbar>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col">
-    <div class="container-fluid">
-      <router-outlet></router-outlet>
+<mat-toolbar color="primary" class="mb-4 p-0 sticky-top mat-elevation-z3">
+  <mat-toolbar-row class="d-flex justify-content-between">
+    <div [routerLink]="['/manage/entries']" style="cursor: pointer; outline: none;">Wonderlist</div>
+    <div>
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon>
+        {{ currentUser.name }}
+      </button>
+      <mat-menu #userMenu style="z-index: 10000">
+        <button mat-menu-item [routerLink]="['/manage/settings']">Settings</button>
+        <button mat-menu-item (click)="logoutClick()">Logout</button>
+      </mat-menu>
     </div>
-  </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="container-fluid">
+  <router-outlet></router-outlet>
 </div>

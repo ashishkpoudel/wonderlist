@@ -44,7 +44,7 @@ export class EntryService {
     );
   }
 
-  delete(entry: Entry): Observable<any> {
-    return this.apiService.delete(`/entries/${entry.id}`);
+  delete(id: number|string): Observable<any> {
+    return this.apiService.delete(`/entries/${id}`);
   }
 }

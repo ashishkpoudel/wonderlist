@@ -1,11 +1,36 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
+
     <div>
-      <mat-card (click)="entryClicked(entry)" *ngFor="let entry of entries" class="mb-4 entry-card mat-elevation-z0">
-        <mat-card-title class="mb-3">{{ entry.title }}</mat-card-title>
-        <mat-card-subtitle>{{ entry.created_at }}</mat-card-subtitle>
-        <mat-card-content>{{ entry.body }}</mat-card-content>
+      <mat-card
+        class="entry-card mb-4 mat-elevation-z0"
+
+        *ngFor="let entry of entries" (click)="editEntryClicked(entry)"
+        #card>
+          <mat-card-title class="mb-3">
+            <div class="d-flex justify-content-between">
+              <div class="title d-flex align-self-center">{{ entry.title }}</div>
+              <div>
+                <button mat-icon-button [matMenuTriggerFor]="entryMenu" (click)="$event.stopPropagation()" style="color: rgba(0,0,0,.4)">
+                  <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+                <mat-menu #entryMenu>
+                  <button mat-menu-item (click)="editEntryClicked(entry)">Edit</button>
+                  <button mat-menu-item (click)="deleteEntryClicked(entry)">Delete</button>
+                </mat-menu>
+              </div>
+            </div>
+          </mat-card-title>
+          <mat-card-subtitle>{{ entry.created_at }}</mat-card-subtitle>
+          <mat-card-content>{{ entry.body }}</mat-card-content>
       </mat-card>
     </div>
+
   </div>
+</div>
+
+<div>
+  <button mat-fab color="primary" (click)="addEntryClicked()" class="add-entry-fab-button">
+    <mat-icon>add</mat-icon>
+  </button>
 </div>

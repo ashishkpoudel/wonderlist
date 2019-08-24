@@ -7,32 +7,43 @@ import { ManageComponent } from './manage.component';
 import { MaterialModule } from 'src/app/material.module';
 import { EntryComponent } from './entry/entry.component';
 import { EntryIndexComponent } from './entry-index/entry-index.component';
-import { EntryResolver } from './entry/entry-resolver.service';
+import { SettingComponent } from './setting/setting.component';
 
 const routes: Routes = [
   {
-    path: 'entries',
+    path: '',
     component: ManageComponent,
     children:
     [
       {
-        path: '',
-        component: EntryIndexComponent,
+        path: 'entries',
+        children: [
+          {
+            path: '',
+            component: EntryIndexComponent,
+          },
+          {
+            path: ':id',
+            component: EntryComponent,
+          }
+        ]
       },
+
       {
-        path: ':id',
-        component: EntryComponent,
-        resolve: { entry: EntryResolver },
+        path: 'settings',
+        component: SettingComponent,
       }
     ]
   }
 ];
+
 
 @NgModule({
   declarations: [
     ManageComponent,
     EntryComponent,
     EntryIndexComponent,
+    SettingComponent,
   ],
   imports: [
     CommonModule,
@@ -40,8 +51,5 @@ const routes: Routes = [
     MaterialModule,
     ReactiveFormsModule,
   ],
-  providers: [
-    EntryResolver,
-  ]
 })
 export class ManageModule { }

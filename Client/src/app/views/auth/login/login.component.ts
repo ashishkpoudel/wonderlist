@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  login() {
+  loginClick() {
     const login = this.loginForm.value;
     this.userService.login(login.email, login.password).subscribe(
       data => { this.router.navigate(['manage/entries']); },

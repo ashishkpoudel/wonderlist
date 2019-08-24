@@ -1,5 +1,4 @@
 import { Component, Inject, OnInit} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -37,16 +36,24 @@ export class EntryComponent implements OnInit {
     }
   }
 
-  saveEntryClicked() {
+  saveEntryClick() {
     this.entryService.save(this.entryForm.value).subscribe(data => {
       this.dialogRef.close(data);
     });
   }
 
-  updateEntryClicked() {
+  updateEntryClick() {
     this.entryService.update(this.entry.id, this.entryForm.value).subscribe(data => {
       this.dialogRef.close(data);
     });
+  }
+
+  closeClick() {
+    this.dialogRef.close();
+  }
+
+  addMediaClick() {
+    alert('add media for entry');
   }
 
 }

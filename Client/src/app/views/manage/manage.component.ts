@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-
-import { Entry } from 'src/app/core';
-import { EntryService } from 'src/app/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/core';
+import { User } from 'src/app/core';
 
 @Component({
   selector: 'app-manage',
@@ -11,39 +10,20 @@ import { EntryService } from 'src/app/core';
 })
 export class ManageComponent implements OnInit {
 
-  entries: Entry[];
-
-  entry: Entry;
-
-  entryForm: FormGroup = this.formBuilder.group({
-    title: [''],
-    body: ['']
-  });
+  currentUser: User;
 
   constructor(
-    private entryService: EntryService,
-    private formBuilder: FormBuilder) { }
+    private router: Router,
+    private userService: UserService,
+  ){}
 
-  ngOnInit() {
-    this.entryService.getAll().subscribe(data => {
-      this.entries = data;
-    });
-
-    this.entryForm.valueChanges.subscribe(() => {
-      this.entryService.update(this.entry.id, this.entryForm.value)
-        .subscribe();
-    });
+  ngOnInit(): void {
+    this.currentUser = this.userService.getCurrentUser();
   }
 
-  entryClicked(entry: Entry) {
-    this.entry = entry;
-    this.entryForm.setValue({title: this.entry.title, body: this.entry.body});
-  }
-
-  deleteEntryClicked(entry: Entry) {
-    this.entryService.delete(entry).subscribe(data => {
-      this.entries = this.entries.filter((e) => e.id !== entry.id);
-    });
+  logoutClick() {
+    this.userService.logout();
+    this.router.navigate(['']);
   }
 
 }
