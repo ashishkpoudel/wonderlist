@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 
 import { ApiService } from './api.service';
 import { Entry } from '../models';
+import { Pagination } from "../models";
 
 @Injectable()
 export class EntryService {
@@ -12,10 +13,13 @@ export class EntryService {
     private apiService: ApiService
   ) {}
 
-  getAll(): Observable<Entry[]> {
+  getAll(): Observable<{entries: Entry[], pagination: Pagination}> {
     return this.apiService.get('/entries').pipe(
       map(response => {
-        return response.data.map(post => Entry.fromJson(post));
+        return {
+          entries: response.data.map(post => new Entry(post)),
+          pagination: new Pagination(response.data),
+        }
       })
     );
   }
@@ -23,7 +27,7 @@ export class EntryService {
   get(id: number|string): Observable<Entry> {
     return this.apiService.get(`/entries/${id}`).pipe(
       map(response => {
-        return Entry.fromJson(response.data);
+        return new Entry(response.data);
       })
     );
   }
@@ -31,7 +35,7 @@ export class EntryService {
   save(data: object = {}): Observable<Entry> {
     return this.apiService.post(`/entries`, data).pipe(
       map(response => {
-        return Entry.fromJson(response.data);
+        return new Entry(response.data);
       })
     );
   }
@@ -39,7 +43,7 @@ export class EntryService {
   update(id: number|string, data: object = {}): Observable<Entry> {
     return this.apiService.patch(`/entries/${id}`, data).pipe(
       map(response => {
-        return Entry.fromJson(response.data);
+        return new Entry(response.data);
       })
     );
   }

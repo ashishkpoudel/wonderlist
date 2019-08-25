@@ -7,7 +7,7 @@
         {{ currentUser.name }}
       </button>
       <mat-menu #userMenu style="z-index: 10000">
-        <button mat-menu-item [routerLink]="['/manage/settings']">Settings</button>
+        <button mat-menu-item [routerLink]="['/manage/settings']">Account</button>
         <button mat-menu-item (click)="logoutClick()">Logout</button>
       </mat-menu>
     </div>

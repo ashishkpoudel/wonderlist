@@ -23,7 +23,7 @@ export class EntryIndexComponent implements OnInit {
 
   ngOnInit() {
     this.entryService.getAll().subscribe(data => {
-      this.entries = data;
+      this.entries = data.entries;
     });
   }
 
@@ -35,6 +35,11 @@ export class EntryIndexComponent implements OnInit {
     dialogRef.afterClosed().subscribe(data => {
       if (data instanceof Entry) {
         this.entries.unshift(data);
+        this.snackBar.open("Entry created successfully", 'Dismiss', {
+          verticalPosition: "bottom",
+          horizontalPosition: "center",
+          duration: 1200
+        });
       }
     });
   }
@@ -49,6 +54,11 @@ export class EntryIndexComponent implements OnInit {
       if (data instanceof Entry) {
         const index = this.entries.findIndex(entry => entry.id === data.id);
         this.entries[index] = data;
+        this.snackBar.open('Entry updated successfully', 'Dismiss', {
+          horizontalPosition: "center",
+          verticalPosition: "bottom",
+          duration: 1200,
+        });
       }
     });
   }

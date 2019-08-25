@@ -1,4 +1,4 @@
-import {User} from './user.model';
+import { User } from './user.model';
 
 export class Entry {
   id: number;
@@ -9,19 +9,17 @@ export class Entry {
   created_at: string;
   updated_at: string;
 
-  static fromJson(data: any) {
-    const entry = new Entry();
-    entry.id = data.id;
-    entry.title = data.title;
-    entry.slug = data.slug;
-    entry.body = data.body;
-    entry.created_at = data.created_at;
-    entry.updated_at = data.updated_at;
+  constructor(data: any) {
+    this.id = data.id;
+    this.title = data.title;
+    this.slug = data.slug;
+    this.body = data.body;
+    this.created_at = data.created_at;
+    this.updated_at = data.updated_at;
 
     if (data.user) {
-      entry.user = User.fromJson(data.user);
+      this.user = User.fromJson(data.user);
     }
-
-    return entry;
   }
+
 }

@@ -12,6 +12,7 @@ import {
   MatIconModule,
   MatDialogModule,
   MatMenuModule,
+  MatCheckboxModule,
 } from '@angular/material';
 
 const materialModules = [
@@ -25,6 +26,7 @@ const materialModules = [
   MatIconModule,
   MatDialogModule,
   MatMenuModule,
+  MatCheckboxModule,
 ];
 
 @NgModule({
