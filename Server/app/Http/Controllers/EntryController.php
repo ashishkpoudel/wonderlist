@@ -13,14 +13,14 @@ class EntryController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->only( 'store', 'update', 'delete');
+        $this->middleware('auth:api')->only(
+            'index', 'store', 'show', 'update', 'delete'
+        );
     }
 
     public function index()
     {
-        // todo authorization users can only view their entries
-
-        $entries = Entry::latest()->paginate();
+        $entries = Entry::latest()->user(auth()->user())->paginate();
 
         return EntryResource::collection($entries);
     }
@@ -38,6 +38,8 @@ class EntryController extends Controller
     {
         $entry = Entry::findOrFail($id);
 
+        $this->authorize(EntryPolicy::VIEW, $entry);
+
         return EntryResource::make($entry);
     }
 
@@ -45,7 +47,7 @@ class EntryController extends Controller
     {
         $entry = Entry::findOrFail($id);
 
-        //$this->authorize(EntryPolicy::UPDATE, $entry);
+        $this->authorize(EntryPolicy::UPDATE, $entry);
 
         $updatedEntry = $updateEntry->execute($entry, $request->entryData());
 
@@ -54,9 +56,9 @@ class EntryController extends Controller
 
     public function delete($id, DeleteEntry $deleteEntry)
     {
-        $entry = Entry::findOrFail($id);
+        $entry = Entry::findOrFail($id);//dd(auth()->user()->id);
 
-        //$this->authorize(EntryPolicy::DELETE, $entry);
+        $this->authorize(EntryPolicy::DELETE, $entry);
 
         $deleteEntry->execute($entry);
 

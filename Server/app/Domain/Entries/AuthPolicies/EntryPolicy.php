@@ -10,9 +10,15 @@ class EntryPolicy
 {
     use HandlesAuthorization;
 
+    const VIEW = 'view';
     const CREATE = 'create';
     const UPDATE = 'update';
     const DELETE = 'delete';
+
+    public function view(User $user, Entry $entry)
+    {
+        return $user->id === (int) $entry->user_id;
+    }
 
     public function create(User $user)
     {
@@ -21,11 +27,11 @@ class EntryPolicy
 
     public function update(User $user, Entry $entry)
     {
-        return $user->id === $entry->user->id;
+        return $user->id === (int) $entry->user_id;
     }
 
     public function delete(User $user, Entry $entry)
     {
-        return $user->id === $entry->user->id;
+        return $user->id === (int) $entry->user_id;
     }
 }

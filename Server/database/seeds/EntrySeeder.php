@@ -15,7 +15,7 @@ class EntrySeeder extends Seeder
     public function run()
     {
         User::all()->each(function($user) {
-            factory(Entry::class)->create(['user_id' => $user->id]);
+            factory(Entry::class, 30)->create(['user_id' => $user->id]);
         });
     }
 }

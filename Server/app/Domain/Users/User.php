@@ -24,6 +24,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function findByEmail(string $email): ?self
+    {
+        return $this->where('email', $email)->first();
+    }
+
     public function generateApiToken()
     {
         $this->update(['api_token' => hash('sha256', Str::random(60))]);
