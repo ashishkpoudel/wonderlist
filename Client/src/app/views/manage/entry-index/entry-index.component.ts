@@ -5,6 +5,7 @@ import { Entry } from 'src/app/core';
 import { EntryService } from 'src/app/core';
 import { EntryComponent } from "../entry/entry.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
+import { HttpQueryBuilder } from "src/app/core";
 
 @Component({
   selector: 'app-entry-index',
@@ -19,10 +20,14 @@ export class EntryIndexComponent implements OnInit {
     private matDialog: MatDialog,
     private snackBar: MatSnackBar,
     private entryService: EntryService,
+    private httpQueryBuilder: HttpQueryBuilder,
   ) { }
 
   ngOnInit() {
-    this.entryService.getAll().subscribe(data => {
+
+    this.httpQueryBuilder.page(1);
+
+    this.entryService.getAll(this.httpQueryBuilder.getParams()).subscribe(data => {
       this.entries = data.entries;
     });
   }

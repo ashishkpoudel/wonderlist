@@ -12,6 +12,10 @@ import {
   AuthGuardService,
 } from './services';
 
+import {
+  HttpQueryBuilder
+} from "./utils";
+
 @NgModule({
   declarations: [],
   imports: [
@@ -24,6 +28,7 @@ import {
     UserService,
     ApiService,
     EntryService,
+    HttpQueryBuilder,
     AuthGuardService
   ]
 })

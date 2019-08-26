@@ -3,25 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/interceptors/http.token.interceptors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/interceptors/http.token.interceptors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/auth-guard.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/auth-guard.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/http-params.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/jwt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/jwt.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/material.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/phpunit.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,13 +165,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="EntryTest.user_can_update_their_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/tests/Feature/EntryTest.php" method="user_can_update_their_entry" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.EntryTest.user_can_update_their_entry">
+    <configuration name="EntryTest.user_can_create_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" method="user_can_create_entry" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.authenticated_user_can_get_their_info" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_get_their_info" scope="Method" />
+    <configuration name="EntryTest.user_can_update_their_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" method="user_can_update_their_entry" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UserTest.authenticated_user_can_logout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -184,6 +186,12 @@
       <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="user_can_login" scope="Method" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.EntryTest.user_can_update_their_entry" />
+        <item itemvalue="PHPUnit.EntryTest.user_can_create_entry" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -211,6 +219,11 @@
       <workItem from="1566483246143" duration="1000" />
       <workItem from="1566483256976" duration="3794000" />
       <workItem from="1566566467538" duration="1951000" />
+      <workItem from="1566635106937" duration="20772000" />
+      <workItem from="1566703713534" duration="599000" />
+      <workItem from="1566704525257" duration="15410000" />
+      <workItem from="1566734867555" duration="15649000" />
+      <workItem from="1566753252093" duration="3824000" />
     </task>
     <servers />
   </component>

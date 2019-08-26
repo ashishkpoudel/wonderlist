@@ -37,7 +37,7 @@ export class UserService {
   populate() {
     if (this.jwtService.getToken()) {
       this.apiService.get('/me').subscribe(
-        data => { this.setAuth(User.fromJson(data.data)); },
+        data => { this.setAuth(new User(data.data)); },
         err => { this.purgeAuth(); }
       );
     } else {

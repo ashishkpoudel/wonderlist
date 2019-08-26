@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Validators } from "@angular/forms";
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { Entry } from 'src/app/core';
@@ -15,8 +16,8 @@ export class EntryComponent implements OnInit {
   entry: Entry;
 
   entryForm: FormGroup = this.formBuilder.group({
-    title: [''],
-    body: [''],
+    title: [null, [Validators.required]],
+    body: [null, [Validators.required]],
   });
 
   constructor(
@@ -50,10 +51,6 @@ export class EntryComponent implements OnInit {
 
   closeClick() {
     this.dialogRef.close();
-  }
-
-  addMediaClick() {
-    alert('add media for entry');
   }
 
 }

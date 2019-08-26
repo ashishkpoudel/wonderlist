@@ -1,66 +1,76 @@
-export class HttpQueryParamsBuilder {
+import { Injectable } from "@angular/core";
 
-  page: number;
+@Injectable()
+export class HttpQueryBuilder {
 
-  limit: number;
+  private _page: number;
 
-  filters: {key: string, value: string}[];
+  private _limit: number;
 
-  includes: string[];
+  private _filters: Filter[] = [];
 
-  get prop() {
-    return 'wow';
-  }
+  private _includes: string[] = [];
 
-  setPage(page: number) {
-    this.page = page;
+  page(page: number) {
+    this._page = page;
     return this;
   }
 
-  setLimit(limit: number) {
-    this.limit = limit;
+  limit(limit: number) {
+    this._limit = limit;
     return this;
   }
 
-  setFilter(key: string, value: string) {
-    this.filters.push({key: key, value: value});
+  filter(key: string, value: string) {
+    const index = this._filters.findIndex(f => f.key == key);
+    if (-1 === index) this._filters.push({key: key, value: value});
     return this;
   }
 
-  addInclude(include: string) {
-    const index = this.includes.findIndex(i => include == i);
-    if (-1 === index) this.includes.push(include);
+  removeFilter(key: string) {
+    const index = this._filters.findIndex(filter => filter.key == key);
+    this._filters.splice(index, 1);
+  }
+
+  include(include: string) {
+    const index = this._includes.findIndex(i => i == include);
+    if (-1 === index) this._includes.push(include);
     return this;
   }
 
   removeInclude(include: string) {
-    const index = this.includes.findIndex(i => include == i);
-    if (-1 !== index) this.includes.splice(index, 1);
+    const index = this._includes.findIndex(i => i == include);
+    if (-1 !== index) this._includes.splice(index, 1);
     return this;
   }
 
-  getQueryParamsObject(): object {
-    const queryParams = {};
+  getParams(): object {
+    const params = {};
 
-    if (this.page) {
-      queryParams[`page`] = this.page;
+    if (this._page) {
+      params[`page`] = this._page;
     }
 
-    if (this.limit) {
-      queryParams[`limit`] = this.limit;
+    if (this._limit) {
+      params[`limit`] = this._limit;
     }
 
-    if (this.filters.length > 0) {
-      this.filters.map(filter => {
-        queryParams[`filter[${filter.key}]`] = filter.value;
+    if (this._filters.length > 0) {
+      this._filters.map(filter => {
+        params[`filter[${filter.key}]`] = filter.value;
       });
     }
 
-    if (this.includes.length > 0) {
-      queryParams[`includes`] = this.includes.join(',');
+    if (this._includes.length > 0) {
+      params[`includes`] = this._includes.join(',');
     }
 
-    return queryParams;
+    return params;
   }
 
+}
+
+interface Filter {
+  key: string;
+  value: string;
 }

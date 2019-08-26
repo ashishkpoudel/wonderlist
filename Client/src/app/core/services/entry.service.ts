@@ -13,8 +13,8 @@ export class EntryService {
     private apiService: ApiService
   ) {}
 
-  getAll(): Observable<{entries: Entry[], pagination: Pagination}> {
-    return this.apiService.get('/entries').pipe(
+  getAll(params = {}): Observable<{entries: Entry[], pagination: Pagination}> {
+    return this.apiService.get('/entries', params).pipe(
       map(response => {
         return {
           entries: response.data.map(post => new Entry(post)),

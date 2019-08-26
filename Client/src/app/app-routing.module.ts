@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuardService } from './core';
+import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'auth',
     loadChildren: () => import('./views/auth/auth.module').then(mod => mod.AuthModule),

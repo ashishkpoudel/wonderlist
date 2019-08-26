@@ -11,14 +11,16 @@ import { MaterialModule } from './material.module';
 import { CoreModule } from './core';
 import { AuthModule } from './views/auth';
 import { ManageModule } from './views/manage';
+import { HomeComponent } from './views/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,

@@ -18,7 +18,7 @@ export class Entry {
     this.updated_at = data.updated_at;
 
     if (data.user) {
-      this.user = User.fromJson(data.user);
+      this.user = new User(data.user);
     }
   }
 
