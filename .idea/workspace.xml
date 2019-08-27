@@ -3,27 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,17 +151,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.EntryTest.user_can_update_their_entry">
-    <configuration name="EntryTest.user_can_create_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" method="user_can_create_entry" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.MediaTest.user_can_upload_media">
+    <configuration name="MediaTest.guest_cannot_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="guest_cannot_upload_media" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="EntryTest.user_can_update_their_entry" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\EntryTest" file="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" method="user_can_update_their_entry" scope="Method" />
+    <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="UserTest.authenticated_user_can_logout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_logout" scope="Method" />
+    <configuration name="MediaTest.we_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="we_can_upload_media" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UserTest.guest_can_register_a_user_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -188,8 +174,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.EntryTest.user_can_update_their_entry" />
-        <item itemvalue="PHPUnit.EntryTest.user_can_create_entry" />
+        <item itemvalue="PHPUnit.MediaTest.user_can_upload_media" />
+        <item itemvalue="PHPUnit.MediaTest.guest_cannot_upload_media" />
+        <item itemvalue="PHPUnit.MediaTest.we_can_upload_media" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +211,7 @@
       <workItem from="1566704525257" duration="15410000" />
       <workItem from="1566734867555" duration="15649000" />
       <workItem from="1566753252093" duration="3824000" />
+      <workItem from="1566914940054" duration="2001000" />
     </task>
     <servers />
   </component>

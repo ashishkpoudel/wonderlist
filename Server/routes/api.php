@@ -1,8 +1,11 @@
 <?php
 
+use App\Domain\Media\Media;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EntryController;
+use App\Http\Controllers\MediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +28,5 @@ Route::post('entries', [EntryController::class, 'store'])->name('entries.store')
 Route::get('entries/{entry}', [EntryController::class, 'show'])->name('entries.show');
 Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entries.update');
 Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');
+
+Route::post('media', [MediaController::class, 'store'])->name('media.store');

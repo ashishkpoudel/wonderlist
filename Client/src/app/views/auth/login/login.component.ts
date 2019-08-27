@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.userService.isAuthenticated.pipe(take(1)).subscribe(data => {
       if (true === data) {
-        this.router.navigateByUrl('manage');
+        this.router.navigateByUrl('manage/entries');
       }
     });
   }
@@ -36,7 +36,9 @@ export class LoginComponent implements OnInit {
   loginClick() {
     const login = this.loginForm.value;
     this.userService.login(login.email, login.password).subscribe(
-      data => { this.router.navigate(['manage/entries']); },
+      data => {
+        this.router.navigateByUrl('manage/entries');
+      },
       error => {
         this.snackBar.open('Invalid login', '', {
           duration: 800,

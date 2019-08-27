@@ -56,7 +56,7 @@ class EntryController extends Controller
 
     public function delete($id, DeleteEntry $deleteEntry)
     {
-        $entry = Entry::findOrFail($id);//dd(auth()->user()->id);
+        $entry = Entry::findOrFail($id);
 
         $this->authorize(EntryPolicy::DELETE, $entry);
 
