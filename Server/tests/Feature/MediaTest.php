@@ -31,7 +31,19 @@ class MediaTest extends TestCase
         $response = $this->postJson(route('media.store'), [
             'file' => $file,
             'subject_id' => '1',
-            'subject_type' => 'entries'
+            'subject_type' => 'entries',
+            'category' => 'photos',
+        ]);
+
+        $response->assertJsonStructure([
+            'data' => [
+                'path',
+                'relative_path',
+                'mime_type',
+                'extension',
+                'size',
+                'category'
+            ]
         ]);
 
         $response->assertStatus(201);

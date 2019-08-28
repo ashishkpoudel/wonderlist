@@ -4,19 +4,18 @@
       <mat-card>
         <mat-card-content>
           <div [formGroup]="loginForm" class="row">
-            <mat-form-field floatLabel="always" class="col-12">
-              <input matInput type="email" placeholder="Email"  formControlName="email">
+            <mat-form-field class="col-12">
+              <input matInput type="email" placeholder="Email"  formControlName="email" value="test@wonderlist.app">
             </mat-form-field>
 
-            <mat-form-field floatLabel="always" class="col-12">
-              <input matInput type="password" placeholder="Password" formControlName="password">
+            <mat-form-field class="col-12">
+              <input matInput type="password" placeholder="Password" formControlName="password" value="password">
             </mat-form-field>
-
-            <div class="col-12">
-              <button mat-stroked-button color="primary" type="button" (click)="loginClick()">Login</button>
-            </div>
           </div>
         </mat-card-content>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary" type="button" (click)="loginClick()" class="w-100">Login</button>
+        </mat-card-actions>
       </mat-card>
     </div>
   </div>

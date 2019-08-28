@@ -17,6 +17,7 @@ class CreateMedia
         $media->size = $mediaData->file->getSize();
         $media->subject_id = $mediaData->subjectId;
         $media->subject_type = $mediaData->subjectType;
+        $media->category = $mediaData->category;
         $media->save();
 
         return $media;

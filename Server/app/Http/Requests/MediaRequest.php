@@ -27,7 +27,8 @@ class MediaRequest extends FormRequest
         return [
             'file' => 'required|file',
             'subject_id' => 'required',
-            'subject_type' => 'required'
+            'subject_type' => 'required',
+            'category' => 'required',
         ];
     }
 
@@ -36,6 +37,7 @@ class MediaRequest extends FormRequest
         return (new MediaData())
             ->setFile($this->file('file'))
             ->setSubjectId($this->get('subject_id'))
-            ->setSubjectType($this->get('subject_type'));
+            ->setSubjectType($this->get('subject_type'))
+            ->setCategory($this->get('category'));
     }
 }

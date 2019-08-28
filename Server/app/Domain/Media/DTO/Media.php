@@ -12,6 +12,8 @@ class MediaData
 
     public $subjectType;
 
+    public $category;
+
     public function setFile(UploadedFile $file)
     {
         $this->file = $file;
@@ -27,6 +29,12 @@ class MediaData
     public function setSubjectType(string $subjectType)
     {
         $this->subjectType = $subjectType;
+        return $this;
+    }
+
+    public function setCategory(string $category)
+    {
+        $this->category = $category;
         return $this;
     }
 }

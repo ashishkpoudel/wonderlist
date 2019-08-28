@@ -21,6 +21,7 @@ class CreateMediaTable extends Migration
             $table->string('size');
             $table->integer('subject_id')->nullable();
             $table->string('subject_type');
+            $table->string('category');
             $table->timestamps();
         });
     }
