@@ -21,7 +21,7 @@ export class HttpQueryBuilder {
     return this;
   }
 
-  filter(key: string, value: string) {
+  addFilter(key: string, value: string) {
     const index = this._filters.findIndex(f => f.key == key);
     if (-1 === index) this._filters.push({key: key, value: value});
     return this;
@@ -32,7 +32,7 @@ export class HttpQueryBuilder {
     this._filters.splice(index, 1);
   }
 
-  include(include: string) {
+  addInclude(include: string) {
     const index = this._includes.findIndex(i => i == include);
     if (-1 === index) this._includes.push(include);
     return this;

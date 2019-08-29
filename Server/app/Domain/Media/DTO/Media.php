@@ -6,6 +6,9 @@ use Illuminate\Http\UploadedFile;
 
 class MediaData
 {
+    /**
+     * @var UploadedFile
+     */
     public $file;
 
     public $subjectId;

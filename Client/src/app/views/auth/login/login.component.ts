@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators} from '@angular/forms';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { take } from 'rxjs/operators';
@@ -13,9 +13,9 @@ import { UserService} from 'src/app/core';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]]
+  loginForm: FormGroup = this.formBuilder.group({
+    email: ['test@wonderlist.app', [Validators.required, Validators.email]],
+    password: ['password', [Validators.required]]
   });
 
   constructor(
@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
 
   loginClick() {
     const login = this.loginForm.value;
+    console.log(login);
     this.userService.login(login.email, login.password).subscribe(
       data => {
         this.router.navigateByUrl('manage/entries');

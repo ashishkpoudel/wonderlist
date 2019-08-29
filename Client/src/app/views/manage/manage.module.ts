@@ -8,6 +8,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { EntryComponent } from './entry/entry.component';
 import { EntryIndexComponent } from './entry-index/entry-index.component';
 import { SettingComponent } from './setting/setting.component';
+import { PasswordConfirmDialogComponent } from './setting/password-confirm-dialog/password-confirm-dialog.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
     EntryComponent,
     EntryIndexComponent,
     SettingComponent,
+    PasswordConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -51,5 +53,9 @@ const routes: Routes = [
     MaterialModule,
     ReactiveFormsModule,
   ],
+  entryComponents: [
+    EntryComponent,
+    PasswordConfirmDialogComponent
+  ]
 })
 export class ManageModule { }

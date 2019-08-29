@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 
-import { Entry } from 'src/app/core';
+import { Entry, Pagination } from 'src/app/core';
 import { EntryService } from 'src/app/core';
 import { EntryComponent } from "../entry/entry.component";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -16,19 +16,22 @@ export class EntryIndexComponent implements OnInit {
 
   entries: Entry[];
 
+  entriesPagination: Pagination;
+
   constructor(
     private matDialog: MatDialog,
     private snackBar: MatSnackBar,
     private entryService: EntryService,
-    private httpQueryBuilder: HttpQueryBuilder,
+    private httpQuery: HttpQueryBuilder,
   ) { }
 
   ngOnInit() {
 
-    this.httpQueryBuilder.page(1);
+    this.httpQuery.page(1);
 
-    this.entryService.getAll(this.httpQueryBuilder.getParams()).subscribe(data => {
+    this.entryService.getAll(this.httpQuery.getParams()).subscribe(data => {
       this.entries = data.entries;
+      this.entriesPagination = data.pagination;
     });
   }
 
@@ -79,7 +82,17 @@ export class EntryIndexComponent implements OnInit {
         });
       }
     )
-
   }
 
+  @HostListener('window:scroll', ['$event'])
+  windowScroll(event) {
+    if (window.pageYOffset > (document.body.clientHeight - window.innerHeight) - 30) {
+      this.httpQuery.page(this.entriesPagination.current_page + 1);
+      this.entryService.getAll(this.httpQuery.getParams()).subscribe(data => {
+        this.entries.push(...data.entries);
+        this.entriesPagination = data.pagination;
+      });
+    }
+  }
 }
+

@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/Actions/CreateMedia.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/Actions/CreateMedia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/MediaRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/MediaRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Resources/MediaResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Resources/MediaResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/migrations/2019_08_27_153230_create_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/migrations/2019_08_27_153230_create_media_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,9 +138,9 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Server/vendor/bin/phpunit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Client/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -151,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.MediaTest.guest_cannot_upload_media">
+  <component name="RunManager">
     <configuration name="MediaTest.guest_cannot_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="guest_cannot_upload_media" scope="Method" />
       <method v="2" />
@@ -205,7 +209,14 @@
       <workItem from="1566734867555" duration="15649000" />
       <workItem from="1566753252093" duration="3824000" />
       <workItem from="1566914940054" duration="3532000" />
-      <workItem from="1566960238076" duration="1445000" />
+      <workItem from="1566960238076" duration="2221000" />
+      <workItem from="1567006753079" duration="853000" />
+      <workItem from="1567009366196" duration="1128000" />
+      <workItem from="1567049258009" duration="1833000" />
+      <workItem from="1567083837563" duration="2670000" />
+      <workItem from="1567088341884" duration="615000" />
+      <workItem from="1567089442214" duration="445000" />
+      <workItem from="1567089903544" duration="4248000" />
     </task>
     <servers />
   </component>

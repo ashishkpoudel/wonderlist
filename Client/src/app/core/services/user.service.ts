@@ -31,9 +31,6 @@ export class UserService {
     this.isAuthenticatedSubject.next(false);
   }
 
-  // Verify JWT in localstorage with server & load user's info.
-  // This runs once on application startup.
-
   populate() {
     if (this.jwtService.getToken()) {
       this.apiService.get('/me').subscribe(
@@ -57,6 +54,14 @@ export class UserService {
 
   getCurrentUser(): User {
     return this.currentUserSubject.value;
+  }
+
+  update(data: object = {}): Observable<User> {
+    return this.apiService.patch('/users', data).pipe(
+      map(response => {
+        return new User(response.data);
+      })
+    );
   }
 
   logout() {

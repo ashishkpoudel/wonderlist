@@ -18,7 +18,7 @@ export class EntryService {
       map(response => {
         return {
           entries: response.data.map(post => new Entry(post)),
-          pagination: new Pagination(response.data),
+          pagination: new Pagination(response),
         }
       })
     );

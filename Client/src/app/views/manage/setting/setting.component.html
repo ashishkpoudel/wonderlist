@@ -1,34 +1,39 @@
 <div class="row">
-  <div class="col-12 col-md-6 offset-md-3">
+  <div class="col-12 col-md-4 offset-md-4">
 
     <mat-card>
       <mat-card-header>
         <mat-card-title>Account</mat-card-title>
         <mat-card-subtitle>Update your account information</mat-card-subtitle>
       </mat-card-header>
-      <mat-card-content>
+      <mat-card-content [formGroup]="settingForm">
         <div class="row">
           <mat-form-field class="col-12">
-            <input matInput placeholder="Full name">
+            <input matInput placeholder="Full name" formControlName="name">
           </mat-form-field>
           <mat-form-field class="col-12">
-            <input matInput placeholder="Email address">
+            <input matInput placeholder="Email address" formControlName="email">
           </mat-form-field>
-          <div class="col-12">
-            <mat-checkbox>Change Password</mat-checkbox>
+          <div class="col-12 my-2">
+            <mat-checkbox
+              [checked]="changePasswordChecked"
+              (change)="changePasswordChecked = changePassword.checked"
+              #changePassword>
+              Change Password
+            </mat-checkbox>
           </div>
-          <div style="display:none;" #passwordInputs>
+          <ng-container *ngIf="changePasswordChecked">
             <mat-form-field class="col-12">
-              <input matInput type="password" placeholder="New Password">
+              <input matInput type="password" placeholder="New Password" formControlName="password">
             </mat-form-field>
             <mat-form-field class="col-12">
-              <input matInput type="password" placeholder="Retype New Password">
+              <input matInput type="password" placeholder="Retype New Password" formControlName="retype_password">
             </mat-form-field>
-          </div>
+          </ng-container>
         </div>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-flat-button color="primary" (click)="saveClick()">Save</button>
+      <mat-card-actions class="d-flex justify-content-end">
+        <button mat-flat-button color="primary" (click)="saveClick()" [disabled]="settingForm.invalid">Save</button>
       </mat-card-actions>
     </mat-card>
 
