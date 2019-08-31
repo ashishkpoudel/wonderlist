@@ -25,7 +25,7 @@ export class SettingComponent implements OnInit {
     'name': ['', [Validators.required]],
     'email': ['', [Validators.required, Validators.email]],
     'password': [''],
-    'retype_password': ['']
+    'retype_password': [''],
   });
 
   constructor(
@@ -48,7 +48,13 @@ export class SettingComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(data => {
       if (data && data.current_password) {
-        this.userService.update();
+        this.settingForm.controls['current_password'].setValue(data.current_password);
+        this.userService.update(this.userService.getCurrentUser().id, this.settingForm.value).subscribe(
+          data => { },
+          error => {
+            console.log(error);
+          }
+        )
       }
     });
   }

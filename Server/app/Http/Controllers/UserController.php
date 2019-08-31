@@ -5,15 +5,35 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
+use App\Http\Requests\UserRequest;
 use App\Http\Resources\UserResource;
 use App\Domain\Users\Actions\UserLogin;
 use App\Domain\Users\Actions\UserRegister;
+use App\Domain\Users\AuthPolicy\UserPolicy;
+use App\Domain\Users\Policies\UserPasswordPolicy;
+use App\Domain\Users\Actions\UpdateUser;
+use App\Domain\Users\User;
 
 class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->only('me', 'logout');
+        $this->middleware('auth:api')->only('update', 'me', 'logout');
+    }
+
+    public function update($id, UserRequest $request, UpdateUser $updateUser,  UserPasswordPolicy $userPasswordPolicy)
+    {
+        $user = User::findOrFail($id);
+
+        $this->authorize(UserPolicy::UPDATE, $user);
+
+        if ($userPasswordPolicy->isValid($user, $request->get('current_password'))) {
+            abort(400);
+        }
+
+        $updatedUser = $updateUser->execute($user, $request->userData());
+
+        return UserResource::make($updatedUser);
     }
 
     public function login(UserLoginRequest $request)

@@ -3,17 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/utils/http-query-builder.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/auth/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Console/Commands/BanUserCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Console/Commands/BanUserCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Console/Commands/UnbanUserCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Console/Commands/UnbanUserCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/Feature/EntryTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,25 +155,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="MediaTest.guest_cannot_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="guest_cannot_upload_media" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.Feature">
+    <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$/Server/tests/Feature" />
       <method v="2" />
     </configuration>
-    <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
+    <configuration name="MediaTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="MediaTest.we_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="we_can_upload_media" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="UserTest.guest_can_register_a_user_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="guest_can_register_a_user_account" scope="Method" />
+    <configuration name="UserTest.authenticated_user_can_get_their_info" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_get_their_info" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="UserTest.user_can_login" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="user_can_login" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.user_can_update_their_profile" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="user_can_update_their_profile" scope="Method" />
       <method v="2" />
     </configuration>
   </component>
@@ -217,6 +217,8 @@
       <workItem from="1567088341884" duration="615000" />
       <workItem from="1567089442214" duration="445000" />
       <workItem from="1567089903544" duration="4248000" />
+      <workItem from="1567135631540" duration="73000" />
+      <workItem from="1567179258753" duration="11478000" />
     </task>
     <servers />
   </component>

@@ -56,8 +56,8 @@ export class UserService {
     return this.currentUserSubject.value;
   }
 
-  update(data: object = {}): Observable<User> {
-    return this.apiService.patch('/users', data).pipe(
+  update(id: number|string, data: object = {}): Observable<User> {
+    return this.apiService.patch(`/users/${id}`, data).pipe(
       map(response => {
         return new User(response.data);
       })

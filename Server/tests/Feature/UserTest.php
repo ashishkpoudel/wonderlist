@@ -43,6 +43,24 @@ class UserTest extends TestCase
     }
 
     /** @test */
+    public function user_can_update_their_profile()
+    {
+        $user = factory(User::class)->create();
+
+        $this->signIn($user);
+
+        $data = [
+            'name' => 'Ashish K. Poudel',
+            'email' => 'test@new.com'
+        ];
+
+        $this->patchJson(route('users.update', $user->id), $data)
+            ->assertStatus(200);
+
+        $this->assertDatabaseHas(User::TABLE, $data);
+    }
+
+    /** @test */
     public function authenticated_user_can_get_their_info()
     {
         $this->signIn();

@@ -1,6 +1,7 @@
 <?php
 
 use App\Domain\Media\Media;
+use App\User;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
@@ -22,6 +23,8 @@ Route::post('login', [UserController::class, 'login'])->name('users.login');
 Route::post('register', [UserController::class, 'register'])->name('users.register');
 Route::get('me', [UserController::class, 'me'])->name('users.me');
 Route::post('logout', [UserController::class, 'logout'])->name('users.logout');
+
+Route::patch('users/{user}', [UserController::class, 'update'])->name('users.update');
 
 Route::get('entries', [EntryController::class, 'index'])->name('entries.index');
 Route::post('entries', [EntryController::class, 'store'])->name('entries.store');

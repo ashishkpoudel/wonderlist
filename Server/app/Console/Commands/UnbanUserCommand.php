@@ -34,6 +34,8 @@ class UnbanUserCommand extends Command
     /**
      * Execute the console command.
      *
+     * @param User $user
+     * @param UnbanUser $unbanUser
      * @return mixed
      */
     public function handle(User $user, UnbanUser $unbanUser)

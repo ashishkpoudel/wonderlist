@@ -43,7 +43,7 @@ class EntryTest extends TestCase
 
         $this->signIn($entry->user);
 
-        $this->patchJson(route('entries.update', $entry->id), $entryData)->dump()
+        $this->patchJson(route('entries.update', $entry->id), $entryData)
             ->assertStatus(200);
 
         $this->assertDatabaseHas(Entry::TABLE, [

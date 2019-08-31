@@ -34,6 +34,8 @@ class BanUserCommand extends Command
     /**
      * Execute the console command.
      *
+     * @param User $user
+     * @param BanUser $banUser
      * @return mixed
      */
     public function handle(User $user, BanUser $banUser)

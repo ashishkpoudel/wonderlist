@@ -14,13 +14,13 @@ class EntryController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api')->only(
-            'index', 'store', 'show', 'update', 'delete'
+             'index', 'store', 'show', 'update', 'delete'
         );
     }
 
     public function index()
     {
-        $entries = Entry::latest()->user(auth()->user())->paginate(5);
+        $entries = Entry::latest()->paginate(5);
 
         return EntryResource::collection($entries);
     }
