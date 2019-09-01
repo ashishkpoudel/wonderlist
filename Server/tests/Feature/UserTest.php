@@ -2,10 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\Domain\Users\User;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Domain\Users\User;
 
 class UserTest extends TestCase
 {
@@ -43,6 +44,27 @@ class UserTest extends TestCase
     }
 
     /** @test */
+    public function user_can_update_their_password()
+    {
+        $user = factory(User::class)->create();
+
+        $this->signIn($user);
+
+        $data = [
+            'password' => '123456',
+            'password_confirmation' => '123456',
+            'current_password' => 'password'
+        ];
+
+        $this->patchJson(route('users.updatePassword', $user->id), $data)
+            ->assertStatus(200);
+
+        $user->refresh();
+
+        $this->assertTrue(Hash::check($data['password'], $user->password));
+    }
+
+    /** @test */
     public function user_can_update_their_profile()
     {
         $user = factory(User::class)->create();
@@ -54,7 +76,7 @@ class UserTest extends TestCase
             'email' => 'test@new.com'
         ];
 
-        $this->patchJson(route('users.update', $user->id), $data)
+        $this->patchJson(route('users.updateProfile', $user->id), $data)
             ->assertStatus(200);
 
         $this->assertDatabaseHas(User::TABLE, $data);

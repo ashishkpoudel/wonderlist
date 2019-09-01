@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, ReplaySubject } from 'rxjs';
-import { map, distinctUntilChanged } from 'rxjs/operators';
+import { map, distinctUntilChanged, tap } from 'rxjs/operators';
 
 import { ApiService } from './api.service';
 import { JwtService } from './jwt.service';
@@ -61,6 +61,18 @@ export class UserService {
       map(response => {
         return new User(response.data);
       })
+    );
+  }
+
+  updateProfile(id: number|string, data: object = {}): Observable<any> {
+    return this.apiService.patch(`/users/${id}/update-profile`, data).pipe(
+      tap(data => this.populate())
+    )
+  }
+
+  updatePassword(id: number|string, data: object = {}): Observable<any> {
+    return this.apiService.patch(`/users/${id}/update-password`, data).pipe(
+      tap(data => this.populate())
     );
   }
 

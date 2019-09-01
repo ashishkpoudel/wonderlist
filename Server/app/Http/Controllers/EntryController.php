@@ -20,7 +20,7 @@ class EntryController extends Controller
 
     public function index()
     {
-        $entries = Entry::latest()->paginate(5);
+        $entries = Entry::latest()->user(auth()->user())->paginate(5);
 
         return EntryResource::collection($entries);
     }

@@ -2,38 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Users\Actions\UpdateUserPassword;
+use App\Domain\Users\Actions\UpdateUserProfile;
+use App\Http\Requests\UserPasswordRequest;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserProfileRequest;
 use App\Http\Resources\UserResource;
 use App\Domain\Users\Actions\UserLogin;
 use App\Domain\Users\Actions\UserRegister;
 use App\Domain\Users\AuthPolicy\UserPolicy;
-use App\Domain\Users\Policies\UserPasswordPolicy;
-use App\Domain\Users\Actions\UpdateUser;
 use App\Domain\Users\User;
 
 class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->only('update', 'me', 'logout');
-    }
-
-    public function update($id, UserRequest $request, UpdateUser $updateUser,  UserPasswordPolicy $userPasswordPolicy)
-    {
-        $user = User::findOrFail($id);
-
-        $this->authorize(UserPolicy::UPDATE, $user);
-
-        if ($userPasswordPolicy->isValid($user, $request->get('current_password'))) {
-            abort(400);
-        }
-
-        $updatedUser = $updateUser->execute($user, $request->userData());
-
-        return UserResource::make($updatedUser);
+        $this->middleware('auth:api')->only('update', 'me', 'logout', 'updateProfile', 'updatePassword');
     }
 
     public function login(UserLoginRequest $request)
@@ -57,6 +43,28 @@ class UserController extends Controller
     public function me(Request $request)
     {
         return UserResource::make($request->user());
+    }
+
+    public function updatePassword($id, UserPasswordRequest $request, UpdateUserPassword $updateUserPassword)
+    {
+        $user = User::findOrFail($id);
+
+        $this->authorize(UserPolicy::UPDATE, $user);
+
+        $updatedUser = $updateUserPassword->execute($user, $request->get('password'));
+
+        return UserResource::make($updatedUser);
+    }
+
+    public function updateProfile($id, UserProfileRequest $userProfileRequest, UpdateUserProfile $updateUserProfile)
+    {
+        $user = User::findOrFail($id);
+
+        $this->authorize(UserPolicy::UPDATE, $user);
+
+        $updated = $updateUserProfile->execute($user, $userProfileRequest->userData());
+
+        return UserResource::make($updated);
     }
 
     public function logout(Request $request)

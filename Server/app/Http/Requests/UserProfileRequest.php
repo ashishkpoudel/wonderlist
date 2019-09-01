@@ -7,7 +7,7 @@ use App\Domain\Users\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class UserRequest extends FormRequest
+class UserProfileRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,16 +28,14 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => ['required', 'min:3'],
-            'email' => ['required', 'email', Rule::unique(User::TABLE, 'email')->ignore(auth()->user()->id)],
-            'password' => ['sometimes', 'required', 'min:6'],
+            'email' => ['required', 'email', Rule::unique(User::TABLE, 'email')->ignore($this->user()->id)],
         ];
     }
 
     public function userData(): UserData
     {
-        $userData = new UserData;
-        $userData->setName($this->get('name'))->setEmail($this->get('email'));
-        if ($this->has('password')) $userData->setPassword($this->get('password'));
-        return $userData;
+        return (new UserData)
+            ->setName($this->get('name'))
+            ->setEmail($this->get('email'));
     }
 }

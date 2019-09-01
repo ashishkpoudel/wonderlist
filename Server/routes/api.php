@@ -24,7 +24,8 @@ Route::post('register', [UserController::class, 'register'])->name('users.regist
 Route::get('me', [UserController::class, 'me'])->name('users.me');
 Route::post('logout', [UserController::class, 'logout'])->name('users.logout');
 
-Route::patch('users/{user}', [UserController::class, 'update'])->name('users.update');
+Route::patch('users/{user}/update-password', [UserController::class, 'updatePassword'])->name('users.updatePassword');
+Route::patch('users/{user}/update-profile', [UserController::class, 'updateProfile'])->name('users.updateProfile');
 
 Route::get('entries', [EntryController::class, 'index'])->name('entries.index');
 Route::post('entries', [EntryController::class, 'store'])->name('entries.store');

@@ -8,7 +8,8 @@ import { MaterialModule } from 'src/app/material.module';
 import { EntryComponent } from './entry/entry.component';
 import { EntryIndexComponent } from './entry-index/entry-index.component';
 import { SettingComponent } from './setting/setting.component';
-import { PasswordConfirmDialogComponent } from './setting/password-confirm-dialog/password-confirm-dialog.component';
+import { EditPasswordDialogComponent } from './setting/edit-password-dialog/edit-password-dialog.component';
+import { EditProfileDialogComponent } from './setting/edit-profile-dialog/edit-profile-dialog.component';
 
 const routes: Routes = [
   {
@@ -45,7 +46,8 @@ const routes: Routes = [
     EntryComponent,
     EntryIndexComponent,
     SettingComponent,
-    PasswordConfirmDialogComponent,
+    EditPasswordDialogComponent,
+    EditProfileDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ const routes: Routes = [
   ],
   entryComponents: [
     EntryComponent,
-    PasswordConfirmDialogComponent
+    EditPasswordDialogComponent,
+    EditProfileDialogComponent,
   ]
 })
 export class ManageModule { }

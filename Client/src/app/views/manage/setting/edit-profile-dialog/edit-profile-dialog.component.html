@@ -1,0 +1,20 @@
+<div mat-dialog-content>
+  <div [formGroup]="editProfileForm" class="row">
+    <mat-form-field floatLabel="always" class="col-12">
+      <input matInput formControlName="name" placeholder="Name">
+      <mat-error *ngIf="editProfileForm.get('name').errors?.serverError">
+        {{ editProfileForm.get('name').errors?.serverError }}
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field floatLabel="always" class="col-12">
+      <input matInput formControlName="email" type="email" placeholder="Email">
+      <mat-error *ngIf="editProfileForm.get('email').errors?.serverError">
+        {{ editProfileForm.get('email').errors?.serverError }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions class="d-flex justify-content-end">
+  <button mat-button (click)="closeClick()" class="mr-2">Close</button>
+  <button mat-flat-button (click)="saveClick()" color="primary">Save</button>
+</div>
