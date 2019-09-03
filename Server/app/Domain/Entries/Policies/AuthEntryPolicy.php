@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Domain\Entries\AuthPolicies;
+namespace App\Domain\Entries\Policies;
 
+use Illuminate\Auth\Access\HandlesAuthorization;
 use App\Domain\Entries\Entry;
 use App\Domain\Users\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
 
-class EntryPolicy
+class AuthEntryPolicy
 {
     use HandlesAuthorization;
 

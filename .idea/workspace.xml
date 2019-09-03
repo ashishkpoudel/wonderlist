@@ -3,23 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/interceptors/http.token.interceptors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/interceptors/http.token.interceptors.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry/entry.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/password-confirm-dialog/password-confirm-dialog.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/password-confirm-dialog/password-confirm-dialog.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/password-confirm-dialog/password-confirm-dialog.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/setting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Policies/UserPasswordPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Users/Policies/UserPasswordPolicy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/edit-password-dialog/edit-password-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/edit-password-dialog/edit-password-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/AuthPolicies/EntryPolicy.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserProfileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +149,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.UserTest.authenticated_user_can_get_their_info">
     <configuration name="UserTest.authenticated_user_can_get_their_info" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="authenticated_user_can_get_their_info" scope="Method" />
       <method v="2" />
@@ -226,7 +214,8 @@
       <workItem from="1567135631540" duration="73000" />
       <workItem from="1567179258753" duration="12702000" />
       <workItem from="1567260738728" duration="4552000" />
-      <workItem from="1567310308947" duration="17750000" />
+      <workItem from="1567310308947" duration="18351000" />
+      <workItem from="1567445658930" duration="1261000" />
     </task>
     <servers />
   </component>

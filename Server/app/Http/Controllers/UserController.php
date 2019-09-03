@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Domain\Users\Actions\UpdateUserPassword;
-use App\Domain\Users\Actions\UpdateUserProfile;
-use App\Http\Requests\UserPasswordRequest;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserPasswordRequest;
 use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use App\Http\Requests\UserProfileRequest;
 use App\Http\Resources\UserResource;
 use App\Domain\Users\Actions\UserLogin;
 use App\Domain\Users\Actions\UserRegister;
-use App\Domain\Users\AuthPolicy\UserPolicy;
+use App\Domain\Users\Policies\AuthUserPolicy;
 use App\Domain\Users\User;
+use App\Domain\Users\Actions\UpdateUserPassword;
+use App\Domain\Users\Actions\UpdateUserProfile;
 
 class UserController extends Controller
 {
@@ -49,7 +49,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $this->authorize(UserPolicy::UPDATE, $user);
+        $this->authorize(AuthUserPolicy::UPDATE, $user);
 
         $updatedUser = $updateUserPassword->execute($user, $request->get('password'));
 
@@ -60,7 +60,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $this->authorize(UserPolicy::UPDATE, $user);
+        $this->authorize(AuthUserPolicy::UPDATE, $user);
 
         $updated = $updateUserProfile->execute($user, $userProfileRequest->userData());
 

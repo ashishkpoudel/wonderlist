@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Users\AuthPolicy;
+namespace App\Domain\Users\Policies;
 
 use App\Domain\Users\User;
 
-class UserPolicy
+class AuthUserPolicy
 {
     const UPDATE = 'update';
 

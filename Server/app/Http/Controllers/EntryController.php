@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\EntryRequest;
 use App\Http\Resources\EntryResource;
-use App\Domain\Entries\AuthPolicies\EntryPolicy;
+use App\Domain\Entries\Policies\AuthEntryPolicy;
 use App\Domain\Entries\Actions\{CreateEntry, UpdateEntry, DeleteEntry};
 use App\Domain\Entries\Entry;
 
@@ -27,7 +27,7 @@ class EntryController extends Controller
 
     public function store(EntryRequest $request, CreateEntry $createEntry)
     {
-        $this->authorize(EntryPolicy::CREATE, Entry::class);
+        $this->authorize(AuthEntryPolicy::CREATE, Entry::class);
 
         $entry = $createEntry->execute($request->entryData());
 
@@ -38,7 +38,7 @@ class EntryController extends Controller
     {
         $entry = Entry::findOrFail($id);
 
-        $this->authorize(EntryPolicy::VIEW, $entry);
+        $this->authorize(AuthEntryPolicy::VIEW, $entry);
 
         return EntryResource::make($entry);
     }
@@ -47,7 +47,7 @@ class EntryController extends Controller
     {
         $entry = Entry::findOrFail($id);
 
-        $this->authorize(EntryPolicy::UPDATE, $entry);
+        $this->authorize(AuthEntryPolicy::UPDATE, $entry);
 
         $updatedEntry = $updateEntry->execute($entry, $request->entryData());
 
@@ -58,7 +58,7 @@ class EntryController extends Controller
     {
         $entry = Entry::findOrFail($id);
 
-        $this->authorize(EntryPolicy::DELETE, $entry);
+        $this->authorize(AuthEntryPolicy::DELETE, $entry);
 
         $deleteEntry->execute($entry);
 

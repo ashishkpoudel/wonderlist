@@ -22,9 +22,9 @@ export class EditPasswordDialogComponent implements OnInit {
     private userService: UserService,
   ) {
     this.editPasswordForm = this.formBuilder.group({
-      'password': ['', Validators.required],
-      'password_confirmation': ['', Validators.required],
-      'current_password': ['', Validators.required]
+      'password': [''],
+      'password_confirmation': [''],
+      'current_password': ['']
     });
   }
 
