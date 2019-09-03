@@ -10,7 +10,9 @@ class MediaController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->only('store');
+        $this->middleware('auth:api')->only(
+            'store'
+        );
     }
 
     public function store(MediaRequest $request, CreateMedia $createMedia)

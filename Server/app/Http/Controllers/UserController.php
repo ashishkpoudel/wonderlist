@@ -19,7 +19,9 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api')->only('update', 'me', 'logout', 'updateProfile', 'updatePassword');
+        $this->middleware('auth:api')->only(
+            'update', 'me', 'logout', 'updateProfile', 'updatePassword'
+        );
     }
 
     public function login(UserLoginRequest $request)

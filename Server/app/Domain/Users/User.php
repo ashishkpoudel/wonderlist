@@ -2,28 +2,11 @@
 
 namespace App\Domain\Users;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Str;
+use App\Domain\Users\Models\UserModel;
 
-class User extends Authenticatable
+class User extends UserModel
 {
-    use Notifiable;
-
-    const TABLE = 'users';
-
-    protected $table = self::TABLE;
-
-    protected $guarded = [];
-
-    protected $hidden = [
-        'api_token', 'password', 'remember_token',
-    ];
-
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
-
     public function findByEmail(string $email): ?self
     {
         return $this->where('email', $email)->first();

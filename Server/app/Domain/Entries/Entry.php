@@ -2,35 +2,12 @@
 
 namespace App\Domain\Entries;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Akp\Slugify\{HasSlug, SlugBuilder};
-use App\Domain\Users\User;
+use App\Domain\Entries\Models\EntryModel;
 
-class Entry extends Model
+class Entry extends EntryModel
 {
-    use HasSlug;
-
-    const TABLE = 'entries';
-
-    protected $table = self::TABLE;
-
-    protected $guarded = [];
-
-    public function user()
+    public function scopeOfUser($query, $user)
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
-    }
-
-    public function scopeUser(Builder $builder, User $user)
-    {
-        return $builder->where('user_id', $user->id);
-    }
-
-    public function slugBuilder(): SlugBuilder
-    {
-        return (new SlugBuilder)
-            ->from('title')
-            ->to('slug');
+        return $query->where('user_id', $user->id);
     }
 }

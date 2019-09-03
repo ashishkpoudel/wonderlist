@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/setting/edit-password-dialog/edit-password-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/setting/edit-password-dialog/edit-password-dialog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/AuthPolicies/EntryPolicy.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Providers/AuthServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +137,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Client/node_modules/typescript/lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server/app/Domain/Entries/Models" />
+      <recent name="$PROJECT_DIR$/Server/app/Domain/Users/Models" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -216,6 +222,9 @@
       <workItem from="1567260738728" duration="4552000" />
       <workItem from="1567310308947" duration="18351000" />
       <workItem from="1567445658930" duration="1261000" />
+      <workItem from="1567481101180" duration="171000" />
+      <workItem from="1567481926770" duration="13000" />
+      <workItem from="1567522095716" duration="6884000" />
     </task>
     <servers />
   </component>
