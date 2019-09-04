@@ -18,6 +18,7 @@ class CreateMedia
         $media->subject_id = $mediaData->subjectId;
         $media->subject_type = $mediaData->subjectType;
         $media->category = $mediaData->category;
+        $media->user()->associate($mediaData->user);
         $media->save();
 
         return $media;

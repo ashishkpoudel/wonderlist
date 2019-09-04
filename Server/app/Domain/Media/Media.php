@@ -3,6 +3,7 @@
 namespace App\Domain\Media;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Domain\Users\User;
 
 class Media extends Model
 {
@@ -15,5 +16,10 @@ class Media extends Model
     public function subject()
     {
         return $this->morphTo();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 }

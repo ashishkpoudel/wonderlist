@@ -3,12 +3,11 @@
 namespace App\Domain\Media\DTO;
 
 use Illuminate\Http\UploadedFile;
+use App\Domain\Users\User;
 
 class MediaData
 {
-    /**
-     * @var UploadedFile
-     */
+    /** @var UploadedFile */
     public $file;
 
     public $subjectId;
@@ -16,6 +15,9 @@ class MediaData
     public $subjectType;
 
     public $category;
+
+    /** @var User */
+    public $user;
 
     public function setFile(UploadedFile $file)
     {
@@ -38,6 +40,12 @@ class MediaData
     public function setCategory(string $category)
     {
         $this->category = $category;
+        return $this;
+    }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
         return $this;
     }
 }

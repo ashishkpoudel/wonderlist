@@ -38,6 +38,7 @@ class MediaRequest extends FormRequest
             ->setFile($this->file('file'))
             ->setSubjectId($this->get('subject_id'))
             ->setSubjectType($this->get('subject_type'))
-            ->setCategory($this->get('category'));
+            ->setCategory($this->get('category'))
+            ->setUser($this->user());
     }
 }

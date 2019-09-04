@@ -34,3 +34,4 @@ Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entri
 Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');
 
 Route::post('media', [MediaController::class, 'store'])->name('media.store');
+Route::delete('media/{media}', [MediaController::class, 'delete'])->name('media.delete');

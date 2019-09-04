@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Domain\Entries\{Policies\AuthEntryPolicy, Entry};
 use App\Domain\Users\{Policies\AuthUserPolicy, User};
+use App\Domain\Media\{Policies\AuthMediaPolicy, Media};
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -17,6 +18,7 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
         Entry::class => AuthEntryPolicy::class,
         User::class => AuthUserPolicy::class,
+        Media::class => AuthMediaPolicy::class
     ];
 
     /**
