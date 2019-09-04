@@ -2,24 +2,9 @@
 
 namespace App\Domain\Media;
 
-use Illuminate\Database\Eloquent\Model;
-use App\Domain\Users\User;
+use App\Domain\Media\Models\MediaModel;
 
-class Media extends Model
+class Media extends MediaModel
 {
-    const TABLE = 'media';
 
-    protected $table = self::TABLE;
-
-    protected $guarded = [];
-
-    public function subject()
-    {
-        return $this->morphTo();
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'user_id', 'id');
-    }
 }

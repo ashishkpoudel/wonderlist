@@ -162,6 +162,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        App\Domain\Core\DomainServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
