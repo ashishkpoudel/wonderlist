@@ -2,13 +2,14 @@
 
 namespace App\Domain\Entries\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Akp\Slugify\{HasSlug, SlugBuilder};
 use App\Domain\Users\User;
 
 class EntryModel extends Model
 {
-    use HasSlug;
+    use SoftDeletes, HasSlug;
 
     const TABLE = 'entries';
 

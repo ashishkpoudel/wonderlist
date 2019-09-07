@@ -73,9 +73,7 @@ class EntryTest extends TestCase
         $this->deleteJson(route('entries.delete', $entry->id))
             ->assertStatus(204);
 
-        $this->assertDatabaseMissing(Entry::TABLE, [
-            'id' => $entry->id
-        ]);
+        $this->assertNotNull($entry->fresh()->deleted_at);
     }
 
 }

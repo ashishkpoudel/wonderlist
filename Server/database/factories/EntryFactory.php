@@ -15,6 +15,6 @@ $factory->define(Entry::class, function (Faker $faker) {
 
 $factory->state(Entry::class, 'with_user', function() {
     return [
-        'user_id' => factory(User::class)->create()->id,
+        'user_id' => factory(User::class)->create()->id
     ];
 });

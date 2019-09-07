@@ -20,6 +20,7 @@ class CreateEntriesTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->longText('body');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
