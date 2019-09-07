@@ -16,6 +16,8 @@ export class EntryIndexComponent implements OnInit {
 
   entries: Entry[];
 
+  sidenavOpened: boolean = true;
+
   entriesPagination: Pagination;
 
   constructor(
@@ -26,10 +28,9 @@ export class EntryIndexComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    this.httpQuery.page(1);
-
-    this.entryService.getAll(this.httpQuery.getParams()).subscribe(data => {
+    const params = this.httpQuery.page(1).getParams();
+    this.entryService.getAll(params).subscribe(
+      data => {
       this.entries = data.entries;
       this.entriesPagination = data.pagination;
     });
@@ -37,7 +38,7 @@ export class EntryIndexComponent implements OnInit {
 
   addEntryClicked() {
     const dialogRef = this.matDialog.open(EntryComponent, {
-      width: '600px'
+      width: '650px'
     });
 
     dialogRef.afterClosed().subscribe(data => {
@@ -54,7 +55,7 @@ export class EntryIndexComponent implements OnInit {
 
   editEntryClicked(entry) {
     const dialogRef = this.matDialog.open(EntryComponent, {
-      width: '600px',
+      width: '650px',
       data: entry,
     });
 
@@ -82,6 +83,25 @@ export class EntryIndexComponent implements OnInit {
         });
       }
     )
+  }
+
+  notesClick() {
+    const params = this.httpQuery.clearFilters();
+    this.entryService.getAll(params).subscribe(
+      data => {
+        this.entries = data.entries;
+        document.documentElement.scrollTop = 0;
+      }
+    );
+  }
+
+  trashClick() {
+    const params = this.httpQuery.clearFilters().page(0).addFilter('trashed', true).getParams();
+    this.entryService.getAll(params).subscribe(
+      data => {
+        this.entries = data.entries
+      }
+    );
   }
 
   @HostListener('window:scroll', ['$event'])

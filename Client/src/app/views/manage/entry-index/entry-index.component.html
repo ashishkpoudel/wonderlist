@@ -1,12 +1,31 @@
-<div class="row">
-  <div class="col-md-6 offset-md-3">
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="sidenavOpened" style="width: 250px; position: fixed; margin-top: 65px;">
+    <ng-container *ngTemplateOutlet="sideNavRef"></ng-container>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-container *ngTemplateOutlet="sidenavContentRef"></ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-    <div>
-      <mat-card
-        class="entry-card mb-4 mat-elevation-z0"
+<ng-template #sideNavRef>
+<mat-nav-list>
+  <a mat-list-item (click)="notesClick()"><mat-icon class="mr-3">notes</mat-icon> Notes</a>
+  <mat-divider></mat-divider>
+  <a mat-list-item (click)="trashClick()"><mat-icon class="mr-3">delete</mat-icon> Trash</a>
+</mat-nav-list>
+</ng-template>
 
-        *ngFor="let entry of entries" (click)="editEntryClicked(entry)"
-        #card>
+<ng-template #sidenavContentRef>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 pt-4">
+
+      <div>
+        <mat-card
+          class="entry-card mb-4 mat-elevation-z0"
+
+          *ngFor="let entry of entries" (click)="editEntryClicked(entry)"
+          #card>
           <mat-card-title class="mb-3">
             <div class="d-flex justify-content-between">
               <div class="title d-flex align-self-center">{{ entry.title }}</div>
@@ -23,9 +42,10 @@
           </mat-card-title>
           <mat-card-subtitle>{{ entry.created_at }}</mat-card-subtitle>
           <mat-card-content>{{ entry.body }}</mat-card-content>
-      </mat-card>
-    </div>
+        </mat-card>
+      </div>
 
+    </div>
   </div>
 </div>
 
@@ -34,3 +54,4 @@
     <mat-icon>add</mat-icon>
   </button>
 </div>
+</ng-template>

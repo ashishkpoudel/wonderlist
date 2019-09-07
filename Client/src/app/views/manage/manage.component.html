@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="mb-4 p-0 sticky-top mat-elevation-z3">
+<mat-toolbar color="primary" class="mat-elevation-z3" style="position: sticky; top: 0; z-index: 1000;">
   <mat-toolbar-row class="d-flex justify-content-between">
     <div [routerLink]="['/manage/entries']" style="cursor: pointer; outline: none;">Wonderlist</div>
     <div>
@@ -14,6 +14,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="container-fluid">
+
+<div class="container-fluid p-0">
   <router-outlet></router-outlet>
 </div>
