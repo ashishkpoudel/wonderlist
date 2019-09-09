@@ -1,52 +1,57 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav mode="side" [(opened)]="sidenavOpened" style="width: 250px; position: fixed; margin-top: 65px;">
+  <mat-sidenav #sidenav mode="side" [(opened)]="globalService.sidenavOpened" style="width: 270px; position: fixed; margin-top: 65px;">
     <ng-container *ngTemplateOutlet="sideNavRef"></ng-container>
   </mat-sidenav>
+
   <mat-sidenav-content>
-    <ng-container *ngTemplateOutlet="sidenavContentRef"></ng-container>
+    <ng-container *ngTemplateOutlet="entryList"></ng-container>
   </mat-sidenav-content>
 </mat-sidenav-container>
 
 <ng-template #sideNavRef>
-<mat-nav-list>
-  <a mat-list-item (click)="notesClick()"><mat-icon class="mr-3">notes</mat-icon> Notes</a>
-  <mat-divider></mat-divider>
-  <a mat-list-item (click)="trashClick()"><mat-icon class="mr-3">delete</mat-icon> Trash</a>
-</mat-nav-list>
+  <mat-nav-list>
+    <a mat-list-item (click)="notesClick()"><mat-icon class="mr-3">notes</mat-icon> Notes</a>
+    <mat-divider></mat-divider>
+    <a mat-list-item (click)="trashClick()"><mat-icon class="mr-3">delete</mat-icon> Trash</a>
+  </mat-nav-list>
 </ng-template>
 
-<ng-template #sidenavContentRef>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 offset-md-3 pt-4">
+<ng-template #entryList>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-6 offset-lg-3 pt-4">
 
-      <div>
-        <mat-card
-          class="entry-card mb-4 mat-elevation-z0"
+        <div class="mb-4" *ngIf="!selectedEntry">
+          <app-entry-edit [entry]="selectedEntry" (entrySave)="entryEditSave($event)"></app-entry-edit>
+        </div>
 
-          *ngFor="let entry of entries" (click)="editEntryClicked(entry)"
-          #card>
-          <mat-card-title class="mb-3">
-            <div class="d-flex justify-content-between">
-              <div class="title d-flex align-self-center">{{ entry.title }}</div>
-              <div>
-                <button mat-icon-button [matMenuTriggerFor]="entryMenu" (click)="$event.stopPropagation()" style="color: rgba(0,0,0,.4)">
-                  <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-                <mat-menu #entryMenu>
-                  <button mat-menu-item (click)="editEntryClicked(entry)">Edit</button>
-                  <button mat-menu-item (click)="deleteEntryClicked(entry)">Delete</button>
-                </mat-menu>
+        <div *ngFor="let entry of entries" (click)="editEntryClicked(entry)">
+          <div class="mb-4" *ngIf="selectedEntry?.id === entry.id">
+            <app-entry-edit [entry]="selectedEntry" (entryUpdate)="entryEditUpdate($event)" (cancel)="entryEditCancel($event)"></app-entry-edit>
+          </div>
+          <mat-card *ngIf="selectedEntry?.id !== entry.id" class="entry-card mb-4 mat-elevation-z0">
+            <mat-card-title class="mb-3">
+              <div class="d-flex justify-content-between">
+                <div class="title d-flex align-self-center">{{ entry.title }}</div>
+                <div>
+                  <button mat-icon-button [matMenuTriggerFor]="entryMenu" (click)="$event.stopPropagation()" style="color: rgba(0,0,0,.4)">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+                  <mat-menu #entryMenu>
+                    <button *ngIf="!entry.trashed" mat-menu-item (click)="editEntryClicked(entry)">Edit</button>
+                    <button *ngIf="entry.trashed" mat-menu-item (click)="restoreEntryClicked(entry)">Restore</button>
+                    <button mat-menu-item (click)="deleteEntryClicked(entry)">Delete</button>
+                  </mat-menu>
+                </div>
               </div>
-            </div>
-          </mat-card-title>
-          <mat-card-subtitle>{{ entry.created_at }}</mat-card-subtitle>
-          <mat-card-content>{{ entry.body }}</mat-card-content>
-        </mat-card>
-      </div>
+            </mat-card-title>
+            <mat-card-subtitle>{{ entry.created_at }}</mat-card-subtitle>
+            <mat-card-content>{{ entry.body }}</mat-card-content>
+          </mat-card>
+        </div>
 
+      </div>
     </div>
-  </div>
 </div>
 
 <div>

@@ -10,6 +10,7 @@ import {
   ApiService,
   EntryService,
   AuthGuardService,
+  GlobalService,
 } from './services';
 
 import {
@@ -28,6 +29,7 @@ import {
     UserService,
     ApiService,
     EntryService,
+    GlobalService,
     HttpQueryBuilder,
     AuthGuardService
   ]

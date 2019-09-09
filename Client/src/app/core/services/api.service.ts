@@ -30,6 +30,11 @@ export class ApiService {
       .pipe(catchError(error => ApiService.handleErrors(error)));
   }
 
+  put(path: string, body: object): Observable<any> {
+    return this.httpClient.put<any> (`${environment.api_url}${path}`, body)
+      .pipe(catchError(error => ApiService.handleErrors(error)));
+  }
+
   patch(path: string, body: object): Observable<any> {
     return this.httpClient.patch<any> (`${environment.api_url}${path}`, body)
       .pipe(catchError(error => ApiService.handleErrors(error)));

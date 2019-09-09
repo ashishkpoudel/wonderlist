@@ -3,3 +3,4 @@ export * from './user.service';
 export * from './api.service';
 export * from './auth-guard.service';
 export * from './entry.service';
+export * from './global.service';

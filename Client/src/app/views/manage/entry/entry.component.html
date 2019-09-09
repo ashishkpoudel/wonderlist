@@ -15,7 +15,7 @@
         <mat-card-actions class="d-flex justify-content-end">
           <div>
             <button mat-button (click)="closeClick()" class="mr-1">Close</button>
-            <button mat-flat-button color="primary" (click)="updateEntryClick()" *ngIf="entry" [disabled]="entryForm.invalid">Update</button>
+            <button mat-flat-button color="primary" (click)="updateEntryClick()" *ngIf="entry" [disabled]="entry.trashed || entryForm.invalid">Update</button>
             <button mat-flat-button color="primary" (click)="saveEntryClick()" *ngIf="! entry" [disabled]="entryForm.invalid">Post</button>
           </div>
         </mat-card-actions>

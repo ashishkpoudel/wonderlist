@@ -10,6 +10,7 @@ import { EntryIndexComponent } from './entry-index/entry-index.component';
 import { SettingComponent } from './setting/setting.component';
 import { EditPasswordDialogComponent } from './setting/edit-password-dialog/edit-password-dialog.component';
 import { EditProfileDialogComponent } from './setting/edit-profile-dialog/edit-profile-dialog.component';
+import { EntryEditComponent } from './entry-edit/entry-edit.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,7 @@ const routes: Routes = [
     SettingComponent,
     EditPasswordDialogComponent,
     EditProfileDialogComponent,
+    EntryEditComponent,
   ],
   imports: [
     CommonModule,
