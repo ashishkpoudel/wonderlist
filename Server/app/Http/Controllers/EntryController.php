@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\EntryRequest;
 use App\Http\Resources\EntryResource;
 use App\Domain\Entries\Policies\AuthEntryPolicy;
-use App\Domain\Entries\Actions\{CreateEntry, UpdateEntry, DeleteEntry};
+use App\Domain\Entries\Actions\{CreateEntry, UpdateEntry, DeleteEntry, RestoreEntry};
 use App\Domain\Entries\Entry;
 
 class EntryController extends Controller
@@ -14,15 +14,19 @@ class EntryController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api')->only(
-            'index', 'store', 'show', 'update', 'delete'
+            'index', 'store', 'show', 'update', 'delete', 'restore'
         );
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $entries = Entry::query()->ofUser(auth()->user())->paginate(5);
+        $entries = Entry::query()->ofUser(auth()->user());
 
-        return EntryResource::collection($entries);
+        if ($request->has('filter.trashed')) {
+            $entries->onlyTrashed();
+        }
+
+        return EntryResource::collection($entries->paginate(5));
     }
 
     public function store(EntryRequest $request, CreateEntry $createEntry)
@@ -56,11 +60,22 @@ class EntryController extends Controller
 
     public function delete($id, DeleteEntry $deleteEntry)
     {
-        $entry = Entry::findOrFail($id);
+        $entry = Entry::withTrashed()->findOrFail($id);
 
         $this->authorize(AuthEntryPolicy::DELETE, $entry);
 
         $deleteEntry->execute($entry);
+
+        return response(null, 204);
+    }
+
+    public function restore($id, RestoreEntry $restoreEntry)
+    {
+        $entry = Entry::withTrashed()->findOrFail($id);
+
+        $this->authorize(AuthEntryPolicy::RESTORE, $entry);
+
+        $restoreEntry->execute($entry);
 
         return response(null, 204);
     }

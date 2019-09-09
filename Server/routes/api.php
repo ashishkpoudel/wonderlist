@@ -31,6 +31,7 @@ Route::get('entries', [EntryController::class, 'index'])->name('entries.index');
 Route::post('entries', [EntryController::class, 'store'])->name('entries.store');
 Route::get('entries/{entry}', [EntryController::class, 'show'])->name('entries.show');
 Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entries.update');
+Route::put('entries/{entry}/restore', [EntryController::class, 'restore'])->name('entries.restore');
 Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');
 
 Route::post('media', [MediaController::class, 'store'])->name('media.store');

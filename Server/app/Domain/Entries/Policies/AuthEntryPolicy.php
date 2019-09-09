@@ -14,6 +14,7 @@ class AuthEntryPolicy
     const CREATE = 'create';
     const UPDATE = 'update';
     const DELETE = 'delete';
+    const RESTORE = 'restore';
 
     public function view(User $user, Entry $entry)
     {
@@ -31,6 +32,11 @@ class AuthEntryPolicy
     }
 
     public function delete(User $user, Entry $entry)
+    {
+        return $user->id === (int) $entry->user_id;
+    }
+
+    public function restore(User $user, Entry $entry)
     {
         return $user->id === (int) $entry->user_id;
     }
