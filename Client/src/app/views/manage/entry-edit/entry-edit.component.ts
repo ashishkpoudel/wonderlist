@@ -22,7 +22,7 @@ export class EntryEditComponent implements OnInit, OnChanges {
   entryUpdate: EventEmitter<Entry> = new EventEmitter();
 
   @Output()
-  cancel: EventEmitter<any> = new EventEmitter();
+  entryCancel: EventEmitter<any> = new EventEmitter();
 
   entryForm: FormGroup = this.formBuilder.group({
     title: [null, [Validators.required]],
@@ -49,19 +49,18 @@ export class EntryEditComponent implements OnInit, OnChanges {
 
   postClick() {
     this.entryService.save(this.entryForm.value).subscribe(
-      data => this.entrySave.emit(data)
+      data => { this.entrySave.emit(data); this.entryForm.reset() }
     );
   }
 
   updateClick() {
     this.entryService.update(this.entry.id, this.entryForm.value).subscribe(
-      data => this.entryUpdate.emit(data)
+      data => { this.entryUpdate.emit(data); this.entryForm.reset(); }
     );
   }
 
   cancelClick() {
     this.entryForm.reset();
-    this.cancel.emit();
   }
 
 }

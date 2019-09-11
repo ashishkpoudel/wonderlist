@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { ManageComponent } from './manage.component';
 import { MaterialModule } from 'src/app/material.module';
-import { EntryComponent } from './entry/entry.component';
 import { EntryIndexComponent } from './entry-index/entry-index.component';
 import { SettingComponent } from './setting/setting.component';
 import { EditPasswordDialogComponent } from './setting/edit-password-dialog/edit-password-dialog.component';
@@ -25,10 +24,6 @@ const routes: Routes = [
             path: '',
             component: EntryIndexComponent,
           },
-          {
-            path: ':id',
-            component: EntryComponent,
-          }
         ]
       },
 
@@ -44,7 +39,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     ManageComponent,
-    EntryComponent,
     EntryIndexComponent,
     SettingComponent,
     EditPasswordDialogComponent,
@@ -58,7 +52,6 @@ const routes: Routes = [
     ReactiveFormsModule,
   ],
   entryComponents: [
-    EntryComponent,
     EditPasswordDialogComponent,
     EditProfileDialogComponent,
   ]

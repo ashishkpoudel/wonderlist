@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +134,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Work" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Client/node_modules/typescript/lib" />
@@ -154,7 +157,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.MediaTest.user_can_upload_media">
+  <component name="RunManager">
     <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
       <method v="2" />
@@ -234,7 +237,9 @@
       <workItem from="1567775414145" duration="16473000" />
       <workItem from="1567868692697" duration="13609000" />
       <workItem from="1567934081887" duration="5149000" />
-      <workItem from="1567949504033" duration="16130000" />
+      <workItem from="1567949504033" duration="16507000" />
+      <workItem from="1568041849014" duration="7181000" />
+      <workItem from="1568123853221" duration="11947000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,7 @@
 import { Component, HostListener, OnInit} from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
 
-import {Entry, EntryService, GlobalService, HttpQueryBuilder, Pagination} from 'src/app/core';
-import {EntryComponent} from "../entry/entry.component";
-import {MatSnackBar} from "@angular/material/snack-bar";
+import { Entry, EntryService, GlobalService, HttpQueryBuilder, Pagination } from 'src/app/core';
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-entry-index',
@@ -19,7 +17,6 @@ export class EntryIndexComponent implements OnInit {
   entriesPagination: Pagination;
 
   constructor(
-    private matDialog: MatDialog,
     private snackBar: MatSnackBar,
     private entryService: EntryService,
     private globalService: GlobalService,
@@ -37,55 +34,36 @@ export class EntryIndexComponent implements OnInit {
 
   entryEditUpdate(entry: Entry) {
     this.selectedEntry = null;
-    // this.entries[this.entries.findIndex(e => e.id === entry.id)] = entry;
+    this.entries[this.entries.findIndex(e => e.id === entry.id)] = entry;
+    this.snackBar.open('Entry updated successfully', 'Dismiss', {
+      horizontalPosition: "center",
+      verticalPosition: "bottom",
+      duration: 1200,
+    });
   }
 
   entryEditSave(entry: Entry) {
     this.entries.unshift(entry);
+    this.snackBar.open('Entry saved successfully', 'Dismiss', {
+      horizontalPosition: "center",
+      verticalPosition: "bottom",
+      duration: 1200,
+    });
   }
 
   entryEditCancel(event: any) {
     this.selectedEntry = null;
   }
 
-  addEntryClicked() {
-    const dialogRef = this.matDialog.open(EntryComponent, {
-      width: '650px'
-    });
-
-    dialogRef.afterClosed().subscribe(data => {
-      if (data instanceof Entry) {
-        this.entries.unshift(data);
-        this.snackBar.open("Entry created successfully", 'Dismiss', {
-          verticalPosition: "bottom",
-          horizontalPosition: "center",
-          duration: 1200
-        });
-      }
-    });
+  addEntryClick() {
+    // do nothing
   }
 
-  editEntryClicked(entry: Entry) {
+  editEntryClick(entry: Entry) {
     this.selectedEntry = entry;
-    // const dialogRef = this.matDialog.open(EntryComponent, {
-    //   width: '650px',
-    //   data: entry,
-    // });
-    //
-    // dialogRef.afterClosed().subscribe(data => {
-    //   if (data instanceof Entry) {
-    //     const index = this.entries.findIndex(entry => entry.id === data.id);
-    //     this.entries[index] = data;
-    //     this.snackBar.open('Entry updated successfully', 'Dismiss', {
-    //       horizontalPosition: "center",
-    //       verticalPosition: "bottom",
-    //       duration: 1200,
-    //     });
-    //   }
-    // });
   }
 
-  deleteEntryClicked(entry: Entry) {
+  deleteEntryClick(entry: Entry) {
     this.entryService.delete(entry.id).subscribe(data => {
         const index = this.entries.findIndex(e => e.id === entry.id);
         this.entries.splice(index, 1);
@@ -98,7 +76,7 @@ export class EntryIndexComponent implements OnInit {
     )
   }
 
-  restoreEntryClicked(entry: Entry) {
+  restoreEntryClick(entry: Entry) {
     this.entryService.restore(entry.id).subscribe(
       data => {
         this.entries.splice(this.entries.findIndex(e => e.id === entry.id), 1);
