@@ -22,7 +22,7 @@ export class EntryEditComponent implements OnInit, OnChanges {
   entryUpdate: EventEmitter<Entry> = new EventEmitter();
 
   @Output()
-  entryCancel: EventEmitter<any> = new EventEmitter();
+  entryCancel: EventEmitter<boolean> = new EventEmitter();
 
   entryForm: FormGroup = this.formBuilder.group({
     title: [null, [Validators.required]],
@@ -30,8 +30,8 @@ export class EntryEditComponent implements OnInit, OnChanges {
   });
 
   constructor(
-    private entryService: EntryService,
     private formBuilder: FormBuilder,
+    private entryService: EntryService
   ) {}
 
   ngOnInit(): void {
@@ -60,7 +60,8 @@ export class EntryEditComponent implements OnInit, OnChanges {
   }
 
   cancelClick() {
-    this.entryForm.reset();
+    //this.entryForm.reset();
+    this.entryCancel.emit(true);
   }
 
 }

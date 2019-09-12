@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/global.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/global.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +239,10 @@
       <workItem from="1567934081887" duration="5149000" />
       <workItem from="1567949504033" duration="16507000" />
       <workItem from="1568041849014" duration="7181000" />
-      <workItem from="1568123853221" duration="11947000" />
+      <workItem from="1568123853221" duration="12066000" />
+      <workItem from="1568216261300" duration="9102000" />
+      <workItem from="1568274301972" duration="3700000" />
+      <workItem from="1568297541018" duration="4855000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,20 @@
+.close-button-wrap {
+  display: none;
+  position: relative;;
+}
+
+.close-button {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  height: initial;
+  width: initial;
+  cursor: pointer;
+  font-size: 18px;
+  padding:2px;
+}
+
+.close-button:hover {
+  color: rgba(0,0,0,0.6);
+  background: #f0f0f0;
+}

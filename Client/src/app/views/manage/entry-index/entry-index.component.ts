@@ -32,11 +32,11 @@ export class EntryIndexComponent implements OnInit {
     });
   }
 
-  entryEditUpdate(entry: Entry) {
+  entryEditUpdate(entry: any) {
     this.selectedEntry = null;
     this.entries[this.entries.findIndex(e => e.id === entry.id)] = entry;
     this.snackBar.open('Entry updated successfully', 'Dismiss', {
-      horizontalPosition: "center",
+      horizontalPosition: "left",
       verticalPosition: "bottom",
       duration: 1200,
     });
@@ -45,13 +45,14 @@ export class EntryIndexComponent implements OnInit {
   entryEditSave(entry: Entry) {
     this.entries.unshift(entry);
     this.snackBar.open('Entry saved successfully', 'Dismiss', {
-      horizontalPosition: "center",
+      horizontalPosition: "left",
       verticalPosition: "bottom",
       duration: 1200,
     });
   }
 
-  entryEditCancel(event: any) {
+  entryEditCancel(event: any)
+  {
     this.selectedEntry = null;
   }
 
@@ -60,7 +61,9 @@ export class EntryIndexComponent implements OnInit {
   }
 
   editEntryClick(entry: Entry) {
-    this.selectedEntry = entry;
+    if (! entry.trashed) {
+      this.selectedEntry = entry;
+    }
   }
 
   deleteEntryClick(entry: Entry) {
@@ -68,7 +71,7 @@ export class EntryIndexComponent implements OnInit {
         const index = this.entries.findIndex(e => e.id === entry.id);
         this.entries.splice(index, 1);
         this.snackBar.open('Entry deleted successfully', 'Dismiss', {
-          horizontalPosition: "center",
+          horizontalPosition: "left",
           verticalPosition: "bottom",
           duration: 1200,
         });
@@ -81,7 +84,7 @@ export class EntryIndexComponent implements OnInit {
       data => {
         this.entries.splice(this.entries.findIndex(e => e.id === entry.id), 1);
         this.snackBar.open('Entry restored successfully', 'Dismiss', {
-          horizontalPosition: "center",
+          horizontalPosition: "left",
           verticalPosition: "bottom",
           duration: 1200,
         });
@@ -95,6 +98,7 @@ export class EntryIndexComponent implements OnInit {
       data => {
         this.entries = data.entries;
         document.documentElement.scrollTop = 0;
+        this.globalService.showEntryEditComponent = true;
       }
     );
   }
@@ -104,6 +108,7 @@ export class EntryIndexComponent implements OnInit {
     this.entryService.getAll(params).subscribe(
       data => {
         this.entries = data.entries
+        this.globalService.showEntryEditComponent = false;
       }
     );
   }

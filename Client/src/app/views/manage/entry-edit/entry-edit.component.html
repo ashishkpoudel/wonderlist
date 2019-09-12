@@ -1,6 +1,9 @@
 <div [formGroup]="entryForm">
 
-  <mat-card class="mat-elevation-z1 p-3">
+  <mat-card class="mat-elevation-z1">
+    <div class="close-button-wrap">
+      <mat-icon class="close-button">close</mat-icon>
+    </div>
     <mat-card-content>
       <mat-form-field floatLabel="always" class="w-100">
         <input matInput (keyup.enter)="body.focus()" formControlName="title" placeholder="Title">
@@ -12,8 +15,8 @@
     <mat-card-actions class="d-flex justify-content-end">
       <div>
         <button mat-button (click)="cancelClick()" class="mr-1">Cancel</button>
-        <button mat-flat-button *ngIf="!entry" (click)="postClick()" color="primary">Post</button>
-        <button mat-flat-button *ngIf="entry" (click)="updateClick()" color="primary">Update</button>
+        <button mat-flat-button *ngIf="!entry" (click)="postClick()" [disabled]="entryForm.invalid" color="primary">Post</button>
+        <button mat-flat-button *ngIf="entry" (click)="updateClick()" [disabled]="entryForm.invalid" color="primary">Update</button>
       </div>
     </mat-card-actions>
   </mat-card>
