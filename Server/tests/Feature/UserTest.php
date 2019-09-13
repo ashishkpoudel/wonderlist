@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class UserTest extends TestCase
 {

@@ -4,7 +4,7 @@ namespace App\Domain\Entries\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use App\Domain\Entries\Entry;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class AuthEntryPolicy
 {

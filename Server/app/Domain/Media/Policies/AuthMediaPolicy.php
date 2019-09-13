@@ -4,7 +4,7 @@ namespace App\Domain\Media\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use App\Domain\Media\Media;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class AuthMediaPolicy
 {

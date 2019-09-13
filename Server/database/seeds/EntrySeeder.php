@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 use App\Domain\Entries\Entry;
 
 class EntrySeeder extends Seeder

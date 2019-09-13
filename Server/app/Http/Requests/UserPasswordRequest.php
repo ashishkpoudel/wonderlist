@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Domain\Users\Policies\UserPasswordPolicy;
+use App\Domain\Accounts\Policies\UserPasswordPolicy;
 
 class UserPasswordRequest extends FormRequest
 {

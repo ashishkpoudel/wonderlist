@@ -3,7 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Faker\Generator as Faker;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 use App\Domain\Entries\Entry;
 
 $factory->define(Entry::class, function (Faker $faker) {

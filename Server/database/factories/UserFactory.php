@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 /*
 |--------------------------------------------------------------------------
 | Model Factories

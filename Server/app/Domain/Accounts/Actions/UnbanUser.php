@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Users\Actions;
+namespace App\Domain\Accounts\Actions;
 
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class UnbanUser
 {

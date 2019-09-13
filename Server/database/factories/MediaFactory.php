@@ -5,7 +5,7 @@
 use Faker\Generator as Faker;
 use Illuminate\Http\UploadedFile;
 use App\Domain\Media\Media;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 $factory->define(Media::class, function (Faker $faker) {
     $file = UploadedFile::fake()->image('example.jpg');

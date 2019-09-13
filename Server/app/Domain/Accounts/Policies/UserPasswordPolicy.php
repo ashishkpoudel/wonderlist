@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Users\Policies;
+namespace App\Domain\Accounts\Policies;
 
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 use Illuminate\Support\Facades\Hash;
 
 class UserPasswordPolicy

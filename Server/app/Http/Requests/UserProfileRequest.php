@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use App\Domain\Users\DTO\UserData;
-use App\Domain\Users\User;
+use App\Domain\Accounts\DTO\UserData;
+use App\Domain\Accounts\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

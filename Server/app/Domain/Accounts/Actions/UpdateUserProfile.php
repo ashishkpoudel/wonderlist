@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\Users\Actions;
+namespace App\Domain\Accounts\Actions;
 
-use App\Domain\Users\User;
-use App\Domain\Users\DTO\UserData;
+use App\Domain\Accounts\User;
+use App\Domain\Accounts\DTO\UserData;
 
 class UpdateUserProfile
 {

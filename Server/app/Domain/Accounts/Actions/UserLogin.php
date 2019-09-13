@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Users\Actions;
+namespace App\Domain\Accounts\Actions;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Auth;
-use App\Domain\Users\DTO\UserData;
+use App\Domain\Accounts\DTO\UserData;
 
 class UserLogin
 {

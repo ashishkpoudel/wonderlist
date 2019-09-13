@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Users\Actions;
+namespace App\Domain\Accounts\Actions;
 
-use App\Domain\Users\{DTO\UserData, User};
+use App\Domain\Accounts\{DTO\UserData, User};
 
 class UserRegister
 {

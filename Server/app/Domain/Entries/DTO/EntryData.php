@@ -2,7 +2,7 @@
 
 namespace App\Domain\Entries\DTO;
 
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class EntryData
 {

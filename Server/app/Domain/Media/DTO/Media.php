@@ -3,7 +3,7 @@
 namespace App\Domain\Media\DTO;
 
 use Illuminate\Http\UploadedFile;
-use App\Domain\Users\User;
+use App\Domain\Accounts\User;
 
 class MediaData
 {

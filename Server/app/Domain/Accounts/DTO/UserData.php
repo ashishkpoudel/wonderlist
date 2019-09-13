@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Users\DTO;
+namespace App\Domain\Accounts\DTO;
 
 class UserData
 {

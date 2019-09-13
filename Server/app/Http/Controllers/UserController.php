@@ -8,12 +8,12 @@ use App\Http\Requests\UserLoginRequest;
 use App\Http\Requests\UserRegisterRequest;
 use App\Http\Requests\UserProfileRequest;
 use App\Http\Resources\UserResource;
-use App\Domain\Users\Actions\UserLogin;
-use App\Domain\Users\Actions\UserRegister;
-use App\Domain\Users\Policies\AuthUserPolicy;
-use App\Domain\Users\User;
-use App\Domain\Users\Actions\UpdateUserPassword;
-use App\Domain\Users\Actions\UpdateUserProfile;
+use App\Domain\Accounts\Actions\UserLogin;
+use App\Domain\Accounts\Actions\UserRegister;
+use App\Domain\Accounts\Policies\AuthUserPolicy;
+use App\Domain\Accounts\User;
+use App\Domain\Accounts\Actions\UpdateUserPassword;
+use App\Domain\Accounts\Actions\UpdateUserProfile;
 
 class UserController extends Controller
 {
