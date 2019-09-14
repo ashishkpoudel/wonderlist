@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domain\Entries;
+namespace App\Domain\Entries\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Akp\Slugify\{HasSlug, SlugBuilder};
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 
 class Entry extends Model
 {

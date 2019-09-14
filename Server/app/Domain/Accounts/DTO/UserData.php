@@ -2,6 +2,8 @@
 
 namespace App\Domain\Accounts\DTO;
 
+use App\Domain\Accounts\Models\Account;
+
 class UserData
 {
     public $name;

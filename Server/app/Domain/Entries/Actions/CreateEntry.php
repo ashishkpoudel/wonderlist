@@ -2,7 +2,7 @@
 
 namespace App\Domain\Entries\Actions;
 
-use App\Domain\Entries\{DTO\EntryData, Entry};
+use App\Domain\Entries\{DTO\EntryData, Models\Entry};
 
 class CreateEntry
 {

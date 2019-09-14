@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\Media;
+namespace App\Domain\Media\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 
 class Media extends Model
 {

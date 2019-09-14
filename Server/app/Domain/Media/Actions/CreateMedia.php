@@ -3,7 +3,7 @@
 namespace App\Domain\Media\Actions;
 
 use Illuminate\Support\Facades\Storage;
-use App\Domain\Media\Media;
+use App\Domain\Media\Models\Media;
 use App\Domain\Media\DTO\MediaData;
 
 class CreateMedia

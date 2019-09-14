@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\Domain\Media\Media;
+use App\Domain\Media\Models\Media;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;

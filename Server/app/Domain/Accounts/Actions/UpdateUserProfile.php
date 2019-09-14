@@ -2,7 +2,7 @@
 
 namespace App\Domain\Accounts\Actions;
 
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 use App\Domain\Accounts\DTO\UserData;
 
 class UpdateUserProfile

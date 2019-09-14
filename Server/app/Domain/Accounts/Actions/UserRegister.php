@@ -2,7 +2,7 @@
 
 namespace App\Domain\Accounts\Actions;
 
-use App\Domain\Accounts\{DTO\UserData, User};
+use App\Domain\Accounts\{DTO\UserData, Models\User};
 
 class UserRegister
 {

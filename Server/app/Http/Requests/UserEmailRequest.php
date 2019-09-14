@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 
 class UserEmailRequest extends FormRequest
 {

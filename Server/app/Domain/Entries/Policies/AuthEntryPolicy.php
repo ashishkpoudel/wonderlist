@@ -3,8 +3,8 @@
 namespace App\Domain\Entries\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use App\Domain\Entries\Entry;
-use App\Domain\Accounts\User;
+use App\Domain\Entries\Models\Entry;
+use App\Domain\Accounts\Models\User;
 
 class AuthEntryPolicy
 {

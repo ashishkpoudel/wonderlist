@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Domain\Entries\{DTO\EntryData, Entry};
+use App\Domain\Entries\{DTO\EntryData};
 
 class EntryRequest extends FormRequest
 {
@@ -26,7 +26,7 @@ class EntryRequest extends FormRequest
     {
         return [
             'title' => ['required'],
-            'body' => ['required']
+            'body' => ['required'],
         ];
     }
 

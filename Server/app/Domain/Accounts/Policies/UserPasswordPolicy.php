@@ -2,7 +2,7 @@
 
 namespace App\Domain\Accounts\Policies;
 
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class UserPasswordPolicy

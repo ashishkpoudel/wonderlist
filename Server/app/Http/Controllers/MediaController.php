@@ -7,7 +7,7 @@ use App\Domain\Media\Policies\AuthMediaPolicy;
 use App\Http\Requests\MediaRequest;
 use App\Http\Resources\MediaResource;
 use App\Domain\Media\Actions\CreateMedia;
-use App\Domain\Media\Media;
+use App\Domain\Media\Models\Media;
 
 class MediaController extends Controller
 {

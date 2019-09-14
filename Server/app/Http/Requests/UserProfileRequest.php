@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Domain\Accounts\DTO\UserData;
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

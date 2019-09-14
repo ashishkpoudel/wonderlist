@@ -3,8 +3,8 @@
 namespace App\Domain\Media\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use App\Domain\Media\Media;
-use App\Domain\Accounts\User;
+use App\Domain\Media\Models\Media;
+use App\Domain\Accounts\Models\User;
 
 class AuthMediaPolicy
 {

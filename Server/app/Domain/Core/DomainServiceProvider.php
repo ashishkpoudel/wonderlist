@@ -6,9 +6,9 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
-use App\Domain\Entries\{Policies\AuthEntryPolicy, Entry};
-use App\Domain\Accounts\{Policies\AuthUserPolicy, User};
-use App\Domain\Media\{Policies\AuthMediaPolicy, Media};
+use App\Domain\Entries\{Policies\AuthEntryPolicy, Models\Entry};
+use App\Domain\Accounts\{Policies\AuthUserPolicy, Models\User};
+use App\Domain\Media\{Policies\AuthMediaPolicy, Models\Media};
 
 class DomainServiceProvider extends ServiceProvider
 {

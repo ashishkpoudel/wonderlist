@@ -7,7 +7,7 @@ use App\Http\Requests\EntryRequest;
 use App\Http\Resources\EntryResource;
 use App\Domain\Entries\Policies\AuthEntryPolicy;
 use App\Domain\Entries\Actions\{CreateEntry, UpdateEntry, DeleteEntry, RestoreEntry};
-use App\Domain\Entries\Entry;
+use App\Domain\Entries\Models\Entry;
 
 class EntryController extends Controller
 {

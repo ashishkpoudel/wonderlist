@@ -2,7 +2,7 @@
 
 namespace App\Domain\Entries\Actions;
 
-use App\Domain\Entries\Entry;
+use App\Domain\Entries\Models\Entry;
 
 class DeleteEntry
 {

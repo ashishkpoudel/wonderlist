@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Domain\Accounts\{DTO\UserData, User};
+use App\Domain\Accounts\{DTO\UserData};
 
 class UserLoginRequest extends FormRequest
 {

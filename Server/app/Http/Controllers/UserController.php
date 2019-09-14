@@ -11,7 +11,7 @@ use App\Http\Resources\UserResource;
 use App\Domain\Accounts\Actions\UserLogin;
 use App\Domain\Accounts\Actions\UserRegister;
 use App\Domain\Accounts\Policies\AuthUserPolicy;
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 use App\Domain\Accounts\Actions\UpdateUserPassword;
 use App\Domain\Accounts\Actions\UpdateUserProfile;
 

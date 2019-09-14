@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use App\Domain\Accounts\{DTO\UserData, User};
+use App\Domain\Accounts\{DTO\UserData, Models\User};
 
 class UserRegisterRequest extends FormRequest
 {

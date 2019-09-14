@@ -1,7 +1,5 @@
 <?php
 
-use App\Domain\Media\Media;
-use App\User;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
@@ -33,6 +31,7 @@ Route::get('entries/{entry}', [EntryController::class, 'show'])->name('entries.s
 Route::patch('entries/{entry}', [EntryController::class, 'update'])->name('entries.update');
 Route::put('entries/{entry}/restore', [EntryController::class, 'restore'])->name('entries.restore');
 Route::delete('entries/{entry}', [EntryController::class, 'delete'])->name('entries.delete');
+
 
 Route::post('media', [MediaController::class, 'store'])->name('media.store');
 Route::delete('media/{media}', [MediaController::class, 'delete'])->name('media.delete');
