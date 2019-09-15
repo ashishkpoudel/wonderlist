@@ -3,41 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Core/DomainServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Core/DomainServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Entry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Models/EntryModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/Models/MediaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/Models/MediaModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/Policies/AuthMediaPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/Policies/AuthMediaPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/BanUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/BanUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/UnbanUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/UnbanUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/UpdateUserPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/UpdateUserPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/UpdateUserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/UpdateUserProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/UserLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/UserLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Actions/UserRegister.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Actions/UserRegister.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/DTO/UserData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/DTO/UserData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Models/UserModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Policies/AuthUserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Policies/AuthUserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/Policies/UserPasswordPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/Policies/UserPasswordPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserEmailRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserEmailRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserProfileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserRegisterRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/factories/EntryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/factories/EntryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/factories/MediaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/factories/MediaFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/seeds/EntrySeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/seeds/EntrySeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/tests/TestCase.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
@@ -187,7 +159,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.MediaTest.user_can_upload_media">
+  <component name="RunManager">
     <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
       <method v="2" />
@@ -272,8 +244,11 @@
       <workItem from="1568123853221" duration="12066000" />
       <workItem from="1568216261300" duration="9102000" />
       <workItem from="1568274301972" duration="3700000" />
-      <workItem from="1568297541018" duration="15868000" />
-      <workItem from="1568342291622" duration="2224000" />
+      <workItem from="1568297541018" duration="16483000" />
+      <workItem from="1568346734434" duration="17000" />
+      <workItem from="1568383798972" duration="1902000" />
+      <workItem from="1568440011645" duration="242000" />
+      <workItem from="1568526898100" duration="12119000" />
     </task>
     <servers />
   </component>

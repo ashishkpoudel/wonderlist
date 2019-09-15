@@ -12,9 +12,11 @@ export class EntryIndexComponent implements OnInit {
 
   selectedEntry?: Entry;
 
-  entries: Entry[];
+  entries: Entry[] = [];
 
   entriesPagination: Pagination;
+
+  selectedEntryPositionY: number;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -35,6 +37,7 @@ export class EntryIndexComponent implements OnInit {
   entryEditUpdate(entry: any) {
     this.selectedEntry = null;
     this.entries[this.entries.findIndex(e => e.id === entry.id)] = entry;
+    window.scrollTo(0, this.selectedEntryPositionY);
     this.snackBar.open('Entry updated successfully', 'Dismiss', {
       horizontalPosition: "left",
       verticalPosition: "bottom",
@@ -54,6 +57,7 @@ export class EntryIndexComponent implements OnInit {
   entryEditCancel(event: any)
   {
     this.selectedEntry = null;
+    window.scrollTo(0, this.selectedEntryPositionY);
   }
 
   addEntryClick() {
@@ -63,6 +67,8 @@ export class EntryIndexComponent implements OnInit {
   editEntryClick(entry: Entry) {
     if (! entry.trashed) {
       this.selectedEntry = entry;
+      this.selectedEntryPositionY = window.scrollY;
+      window.scrollTo(0, 0);
     }
   }
 

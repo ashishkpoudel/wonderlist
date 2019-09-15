@@ -1,3 +1,13 @@
+.entry-edit-card {
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+}
+
+.entry-edit-card .body {
+  min-height: 70px;
+  overflow: hidden;
+}
+
 .close-button-wrap {
   display: none;
   position: relative;;

@@ -60,7 +60,7 @@ export class EntryEditComponent implements OnInit, OnChanges {
   }
 
   cancelClick() {
-    //this.entryForm.reset();
+    this.entryForm.reset();
     this.entryCancel.emit(true);
   }
 
