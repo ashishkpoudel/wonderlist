@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-index/entry-index.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +242,7 @@
       <workItem from="1568346734434" duration="17000" />
       <workItem from="1568383798972" duration="1902000" />
       <workItem from="1568440011645" duration="242000" />
-      <workItem from="1568526898100" duration="12119000" />
+      <workItem from="1568526898100" duration="19587000" />
     </task>
     <servers />
   </component>

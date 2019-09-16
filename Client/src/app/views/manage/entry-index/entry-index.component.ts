@@ -10,13 +10,13 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 export class EntryIndexComponent implements OnInit {
 
+  addEntry = false;
+
   selectedEntry?: Entry;
 
   entries: Entry[] = [];
 
   entriesPagination: Pagination;
-
-  selectedEntryPositionY: number;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -37,7 +37,6 @@ export class EntryIndexComponent implements OnInit {
   entryEditUpdate(entry: any) {
     this.selectedEntry = null;
     this.entries[this.entries.findIndex(e => e.id === entry.id)] = entry;
-    window.scrollTo(0, this.selectedEntryPositionY);
     this.snackBar.open('Entry updated successfully', 'Dismiss', {
       horizontalPosition: "left",
       verticalPosition: "bottom",
@@ -57,18 +56,16 @@ export class EntryIndexComponent implements OnInit {
   entryEditCancel(event: any)
   {
     this.selectedEntry = null;
-    window.scrollTo(0, this.selectedEntryPositionY);
   }
 
   addEntryClick() {
-    // do nothing
+    this.selectedEntry = null;
+    this.addEntry = true;+ 0=-
   }
 
   editEntryClick(entry: Entry) {
     if (! entry.trashed) {
       this.selectedEntry = entry;
-      this.selectedEntryPositionY = window.scrollY;
-      window.scrollTo(0, 0);
     }
   }
 
@@ -123,10 +120,12 @@ export class EntryIndexComponent implements OnInit {
   windowScroll(event) {
     if (window.pageYOffset > (document.body.clientHeight - window.innerHeight) - 30) {
       this.httpQuery.page(this.entriesPagination.current_page + 1);
-      this.entryService.getAll(this.httpQuery.getParams()).subscribe(data => {
-        this.entries.push(...data.entries);
-        this.entriesPagination = data.pagination;
-      });
+      this.entryService.getAll(this.httpQuery.getParams()).subscribe(
+        data => {
+          this.entries.push(...data.entries);
+          this.entriesPagination = data.pagination;
+        }
+      );
     }
   }
 }

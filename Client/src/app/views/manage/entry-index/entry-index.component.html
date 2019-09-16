@@ -29,18 +29,24 @@
     <div class="row">
       <div class="col-sm-10 offset-sm-1 col-md-10 offset-md-1 col-lg-6 offset-lg-3 pt-4">
 
-        <div class="mb-4">
+        <div class="mb-3" *ngIf="addEntry">
           <app-entry-edit
+            (entrySave)="entryEditSave($event)"
+            (entryCancel)="entryEditCancel($event)"></app-entry-edit>
+        </div>
+
+        <div>
+        <div *ngFor="let entry of entries" (click)="editEntryClick(entry)">
+
+          <app-entry-edit
+            *ngIf="selectedEntry?.id === entry.id"
             [entry]="selectedEntry"
             [hidden]="false === globalService.showEntryEditComponent"
             (entrySave)="entryEditSave($event)"
             (entryUpdate)="entryEditUpdate($event)"
             (entryCancel)="entryEditCancel($event)"></app-entry-edit>
-        </div>
 
-        <div [ngClass]="{'entry-list-blured': selectedEntry}">
-        <div *ngFor="let entry of entries" (click)="editEntryClick(entry)">
-          <mat-card class="entry-card mb-4 mat-elevation-z0">
+          <mat-card class="entry-card mb-4 mat-elevation-z0" [ngClass]="{'entry-list-blured': selectedEntry}">
             <mat-card-title class="mb-2">
               <div class="d-flex justify-content-between">
                 <div class="title d-flex align-self-center">{{ entry.title }}</div>

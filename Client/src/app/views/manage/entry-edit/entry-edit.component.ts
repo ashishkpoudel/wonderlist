@@ -22,7 +22,7 @@ export class EntryEditComponent implements OnInit, OnChanges {
   entryUpdate: EventEmitter<Entry> = new EventEmitter();
 
   @Output()
-  entryCancel: EventEmitter<boolean> = new EventEmitter();
+  entryCancel: EventEmitter<Entry> = new EventEmitter();
 
   entryForm: FormGroup = this.formBuilder.group({
     title: [null, [Validators.required]],
@@ -32,13 +32,14 @@ export class EntryEditComponent implements OnInit, OnChanges {
   constructor(
     private formBuilder: FormBuilder,
     private entryService: EntryService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.entry.currentValue) {
+    if (changes.entry.currentValue && changes.entry.isFirstChange()) {
       const entry: Entry = changes.entry.currentValue;
       this.entryForm.setValue({
         title: entry.title,
@@ -49,19 +50,26 @@ export class EntryEditComponent implements OnInit, OnChanges {
 
   postClick() {
     this.entryService.save(this.entryForm.value).subscribe(
-      data => { this.entrySave.emit(data); this.entryForm.reset() }
+      data => {
+        this.entrySave.emit(data);
+        this.entryForm.reset()
+      }
     );
   }
 
   updateClick() {
     this.entryService.update(this.entry.id, this.entryForm.value).subscribe(
-      data => { this.entryUpdate.emit(data); this.entryForm.reset(); }
+      data => {
+        this.entryUpdate.emit(data);
+        this.entryForm.reset();
+      }
     );
   }
 
   cancelClick() {
-    this.entryForm.reset();
-    this.entryCancel.emit(true);
+    setTimeout(() => { // fix not detecting change
+      this.entryCancel.emit(this.entry);
+      this.entryForm.reset();
+    }, 0);
   }
-
 }
