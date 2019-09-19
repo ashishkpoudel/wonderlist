@@ -46,6 +46,7 @@ export class EntryIndexComponent implements OnInit {
 
   entryEditSave(entry: Entry) {
     this.entries.unshift(entry);
+    this.addEntry = false;
     this.snackBar.open('Entry saved successfully', 'Dismiss', {
       horizontalPosition: "left",
       verticalPosition: "bottom",
@@ -56,16 +57,19 @@ export class EntryIndexComponent implements OnInit {
   entryEditCancel(event: any)
   {
     this.selectedEntry = null;
+    this.addEntry = false;
   }
 
   addEntryClick() {
     this.selectedEntry = null;
-    this.addEntry = true;+ 0=-
+    this.addEntry = true;
+    window.scrollTo(0,0);
   }
 
   editEntryClick(entry: Entry) {
-    if (! entry.trashed) {
+    if (!entry.trashed && !this.selectedEntry) {
       this.selectedEntry = entry;
+      this.addEntry = false;
     }
   }
 
@@ -110,7 +114,7 @@ export class EntryIndexComponent implements OnInit {
     const params = this.httpQuery.clearFilters().page(1).addFilter('trashed', true).getParams();
     this.entryService.getAll(params).subscribe(
       data => {
-        this.entries = data.entries
+        this.entries = data.entries;
         this.globalService.showEntryEditComponent = false;
       }
     );

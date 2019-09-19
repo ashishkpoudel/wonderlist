@@ -6,7 +6,7 @@
     </div>
     <mat-card-content>
       <mat-form-field floatLabel="always" class="w-100">
-        <input matInput (keyup.enter)="body.focus()" formControlName="title" placeholder="Title">
+        <input class="title" matInput (keyup.enter)="body.focus()" formControlName="title" placeholder="Title">
       </mat-form-field>
       <mat-form-field floatLabel="always" class="w-100">
         <textarea class="body" matInput formControlName="body" cdkTextareaAutosize placeholder="Text" #body></textarea>

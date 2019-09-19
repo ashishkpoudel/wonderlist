@@ -20,7 +20,7 @@ class EntryController extends Controller
 
     public function index(Request $request)
     {
-        $entries = Entry::query()->ofUser(auth()->user());
+        $entries = Entry::query()->latest()->ofUser(auth()->user());
 
         if ($request->has('filter.trashed')) {
             $entries->onlyTrashed();

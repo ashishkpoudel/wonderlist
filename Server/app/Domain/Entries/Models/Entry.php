@@ -3,6 +3,7 @@
 namespace App\Domain\Entries\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Akp\Slugify\{HasSlug, SlugBuilder};
 use App\Domain\Accounts\Models\User;
@@ -16,6 +17,11 @@ class Entry extends Model
     protected $table = self::TABLE;
 
     protected $guarded = [];
+
+    public function excerpt(int $limit = 200): string
+    {
+        return Str::limit(strip_tags($this->body), $limit);
+    }
 
     public function user()
     {

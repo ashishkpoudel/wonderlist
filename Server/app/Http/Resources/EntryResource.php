@@ -18,6 +18,7 @@ class EntryResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'slug' => $this->slug,
+            'excerpt' => $this->excerpt(),
             'body' => $this->body,
             'user' => $this->whenLoaded('user', function(){ return UserResource::make($this->user); }),
             'trashed' => $this->trashed(),

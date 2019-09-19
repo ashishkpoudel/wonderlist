@@ -40,7 +40,7 @@ export class EditProfileDialogComponent implements OnInit {
       data => {
         this.snackBar.open('Profile updated', 'Dismiss', {
           duration: 1200,
-          horizontalPosition: "center",
+          horizontalPosition: "left",
           verticalPosition: "bottom"
         });
 
@@ -66,3 +66,4 @@ export class EditProfileDialogComponent implements OnInit {
   }
 
 }
+

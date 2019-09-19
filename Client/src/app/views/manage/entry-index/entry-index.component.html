@@ -4,7 +4,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <ng-container *ngIf="!entries.length > 0">
+    <ng-container *ngIf="entries.length === 0">
       <div style="text-align: center;">
         <div class="mb-3"><mat-icon style="font-size: 75px;">delete</mat-icon></div>
         <div>Lorem ipsum dolor sit amet, consectetur adipisicing</div>
@@ -31,6 +31,7 @@
 
         <div class="mb-3" *ngIf="addEntry">
           <app-entry-edit
+            *ngIf="addEntry"
             (entrySave)="entryEditSave($event)"
             (entryCancel)="entryEditCancel($event)"></app-entry-edit>
         </div>
@@ -46,7 +47,7 @@
             (entryUpdate)="entryEditUpdate($event)"
             (entryCancel)="entryEditCancel($event)"></app-entry-edit>
 
-          <mat-card class="entry-card mb-4 mat-elevation-z0" [ngClass]="{'entry-list-blured': selectedEntry}">
+          <mat-card *ngIf="selectedEntry?.id !== entry.id" class="entry-card mb-4 mat-elevation-z0" [ngClass]="{'entry-list-blured': selectedEntry}">
             <mat-card-title class="mb-2">
               <div class="d-flex justify-content-between">
                 <div class="title d-flex align-self-center">{{ entry.title }}</div>
@@ -63,7 +64,7 @@
               </div>
             </mat-card-title>
             <mat-card-subtitle>{{ entry.created_at | date }}</mat-card-subtitle>
-            <mat-card-content>{{ entry.body }}</mat-card-content>
+            <mat-card-content>{{ entry.excerpt }}</mat-card-content>
           </mat-card>
         </div>
         </div>

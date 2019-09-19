@@ -37,7 +37,7 @@ export class EditPasswordDialogComponent implements OnInit {
       data => {
         this.snackBar.open('Password updated', 'Dismiss', {
           duration: 1200,
-          horizontalPosition: "center",
+          horizontalPosition: "left",
           verticalPosition: "bottom"
         });
 
