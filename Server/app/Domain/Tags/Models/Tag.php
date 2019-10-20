@@ -13,6 +13,11 @@ class Tag extends Model
 
     protected $guarded = [];
 
+    public function scopeOfUser($query, $user)
+    {
+        return $query->where('user_id', $user->id);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');

@@ -12,6 +12,8 @@ class EntryData
 
     public $user;
 
+    public $tagIds;
+
     public function setTitle(string $title)
     {
         $this->title = $title;

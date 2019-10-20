@@ -28,10 +28,7 @@ class EntryTest extends TestCase
         $this->postJson(route('entries.store'), $entryData)
             ->assertStatus(201);
 
-        $this->assertDatabaseHas(Entry::TABLE, [
-           'title' => $entryData['title'],
-           'body' => $entryData['body']
-        ]);
+        $this->assertDatabaseHas(Entry::TABLE, $entryData);
     }
 
     /** @test */
@@ -45,10 +42,7 @@ class EntryTest extends TestCase
         $this->patchJson(route('entries.update', $entry->id), $entryData)
             ->assertStatus(200);
 
-        $this->assertDatabaseHas(Entry::TABLE, [
-            'title' => $entryData['title'],
-            'body' => $entryData['body']
-        ]);
+        $this->assertDatabaseHas(Entry::TABLE, $entryData);
     }
 
     /** @test */

@@ -9,16 +9,22 @@ import {
   UserService,
   ApiService,
   EntryService,
+  TagService,
   AuthGuardService,
   GlobalService,
 } from './services';
+
+import {
+  FocusDirective
+} from "./directives";
 
 import {
   HttpQueryBuilder
 } from "./utils";
 
 @NgModule({
-  declarations: [],
+  declarations: [FocusDirective],
+  exports: [FocusDirective],
   imports: [
     CommonModule,
     HttpClientModule
@@ -29,6 +35,7 @@ import {
     UserService,
     ApiService,
     EntryService,
+    TagService,
     GlobalService,
     HttpQueryBuilder,
     AuthGuardService

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Domain\Accounts\User;
+use App\Domain\Accounts\Models\User;
 
 class UserSeeder extends Seeder
 {

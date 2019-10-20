@@ -9,7 +9,6 @@ class UpdateTag
 {
     public function execute(Tag $tag, TagData $tagData): Tag
     {
-        $tag->user->associate($tagData->user);
         $tag->name = $tagData->name;
         $tag->save();
 

@@ -1,0 +1,27 @@
+<div class="container-fluid pt-4">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+
+      <mat-card *ngFor="let tag of tags" class="card mb-4">
+        <form [formGroup]="tagForm" (ngSubmit)="tagFormSubmit(tagForm)" #form>
+          <mat-card-title>
+            <div class="row">
+              <div class="col-10">
+                <div class="title d-flex align-self-center">
+                  <div *ngIf="selectedTag?.id !== tag.id">{{ tag.name }}</div>
+                  <mat-form-field
+                    *ngIf="selectedTag?.id === tag.id" class="w-100">
+                    <input matInput formControlName="name" (blur)="nameInputBlur()" [appFocus]="selectedTag?.id === tag.id"></mat-form-field>
+                </div>
+              </div>
+              <div class="col-2" style="text-align: right">
+                <mat-icon class="edit-icon" (click)="editClick(tag)">edit</mat-icon>
+              </div>
+            </div>
+          </mat-card-title>
+        </form>
+      </mat-card>
+
+    </div>
+  </div>
+</div>

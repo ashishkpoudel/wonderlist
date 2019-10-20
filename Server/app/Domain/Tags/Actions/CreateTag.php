@@ -10,8 +10,8 @@ class CreateTag
     public function execute(TagData $tagData): Tag
     {
         $tag = new Tag;
-        $tag->user->associate($tagData->user);
         $tag->name = $tagData->name;
+        $tag->user()->associate($tagData->user);
         $tag->save();
 
         return $tag;

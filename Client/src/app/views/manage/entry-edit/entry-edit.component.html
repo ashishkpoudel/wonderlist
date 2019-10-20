@@ -12,7 +12,10 @@
         <textarea class="body" matInput formControlName="body" cdkTextareaAutosize placeholder="Text" #body></textarea>
       </mat-form-field>
     </mat-card-content>
-    <mat-card-actions class="d-flex justify-content-end">
+    <mat-card-actions class="d-flex justify-content-between">
+      <div>
+        <button mat-button>Media</button>
+      </div>
       <div>
         <button mat-button (click)="cancelClick()" class="mr-1">Cancel</button>
         <button mat-flat-button *ngIf="!entry" (click)="postClick()" [disabled]="entryForm.invalid" color="primary">Post</button>

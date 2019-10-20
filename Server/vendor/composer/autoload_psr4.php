@@ -43,7 +43,7 @@ return array(
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'PackageVersions\\' => array($vendorDir . '/ocramius/package-versions/src/PackageVersions'),
     'PHPStan\\PhpDocParser\\' => array($vendorDir . '/phpstan/phpdoc-parser/src'),
-    'PHPStan\\' => array($vendorDir . '/phpstan/phpstan/src', $vendorDir . '/phpstan/phpstan/build/PHPStan'),
+    'PHPStan\\' => array($vendorDir . '/phpstan/phpstan/src'),
     'Orchestra\\Testbench\\' => array($vendorDir . '/orchestra/testbench-core/src'),
     'Opis\\Closure\\' => array($vendorDir . '/opis/closure/src'),
     'NunoMaduro\\Larastan\\' => array($vendorDir . '/nunomaduro/larastan/src'),

@@ -15,6 +15,10 @@ class CreateEntryTagTable extends Migration
     {
         Schema::create('entry_tag', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('entry_id');
+            $table->foreign('entry_id')->references('id')->on('entries')->onUpdate('cascade')->onDelete('cascade');
+            $table->unsignedBigInteger('tag_id');
+            $table->foreign('tag_id')->references('id')->on('tags')->onUpdate('cascade');
             $table->timestamps();
         });
     }

@@ -1,0 +1,28 @@
+.card {
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  border: 1px solid rgba(0,0,0,.09);
+  cursor: default;
+  user-select: none;
+}
+
+.card:hover {
+  border-color: rgba(0,0,0,.20);
+}
+
+.card .title {
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.card .edit-icon {
+  color: rgba(0, 0, 0, .4);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card .edit-icon:hover {
+  color: rgb(0, 0, 0);
+}

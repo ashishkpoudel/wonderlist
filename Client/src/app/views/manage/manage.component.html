@@ -20,6 +20,21 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
+<!-- toolbar ends -->
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [(opened)]="globalService.sidenavOpened" style="width: 270px; position: fixed; margin-top: 65px;">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/manage/entries"><mat-icon class="mr-3">notes</mat-icon> Notes</a>
+      <a mat-list-item routerLink="/manage/tags"><mat-icon class="mr-3">label</mat-icon> Tags</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/manage/entries/trash"><mat-icon class="mr-3">delete</mat-icon> Trash</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 

@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Domain\Accounts\User;
-use App\Domain\Entries\Entry;
+use App\Domain\Accounts\Models\User;
+use App\Domain\Entries\Models\Entry;
 
 class EntrySeeder extends Seeder
 {
