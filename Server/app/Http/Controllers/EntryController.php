@@ -60,7 +60,7 @@ class EntryController extends Controller
 
     public function delete($id, DeleteEntry $deleteEntry)
     {
-        $entry = Entry::withTrashed()->findOrFail($id);
+        $entry = Entry::withTrashed()->findOrFail($id)->first();
 
         $this->authorize(AuthEntryPolicy::DELETE, $entry);
 
@@ -71,7 +71,7 @@ class EntryController extends Controller
 
     public function restore($id, RestoreEntry $restoreEntry)
     {
-        $entry = Entry::withTrashed()->findOrFail($id);
+        $entry = Entry::withTrashed()->findOrFail($id)->first();
 
         $this->authorize(AuthEntryPolicy::RESTORE, $entry);
 

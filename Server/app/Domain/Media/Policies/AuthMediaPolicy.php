@@ -11,6 +11,7 @@ class AuthMediaPolicy
     use HandlesAuthorization;
 
     const CREATE = 'create';
+
     const DELETE = 'delete';
 
     public function create(User $user, Media $media)

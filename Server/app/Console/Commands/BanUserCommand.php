@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Domain\Users\{User, Actions\BanUser};
+use App\Domain\Accounts\{Models\User, Actions\BanUser};
 
 class BanUserCommand extends Command
 {

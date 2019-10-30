@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EntryController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +36,6 @@ Route::get('tags', [TagController::class, 'index'])->name('tags.index');
 Route::post('tags', [TagController::class, 'store'])->name('tags.store');
 Route::patch('tags/{tag}', [TagController::class, 'update'])->name('tags.update');
 Route::delete('tags/{tag}', [TagController::class, 'delete'])->name('tags.delete');
-
 
 Route::post('media', [MediaController::class, 'store'])->name('media.store');
 Route::delete('media/{media}', [MediaController::class, 'delete'])->name('media.delete');

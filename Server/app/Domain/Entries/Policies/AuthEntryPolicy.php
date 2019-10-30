@@ -11,9 +11,13 @@ class AuthEntryPolicy
     use HandlesAuthorization;
 
     const VIEW = 'view';
+
     const CREATE = 'create';
+
     const UPDATE = 'update';
+
     const DELETE = 'delete';
+
     const RESTORE = 'restore';
 
     public function view(User $user, Entry $entry)

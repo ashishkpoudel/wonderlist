@@ -32,7 +32,7 @@ class TagRequest extends FormRequest
     public function tagData(): TagData
     {
         return (new TagData)
-            ->setUser($this->user())
-            ->setName($this->get('name'));
+            ->withUser($this->user())
+            ->withName($this->get('name'));
     }
 }

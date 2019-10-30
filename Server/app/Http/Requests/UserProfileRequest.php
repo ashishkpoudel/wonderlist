@@ -35,7 +35,7 @@ class UserProfileRequest extends FormRequest
     public function userData(): UserData
     {
         return (new UserData)
-            ->setName($this->get('name'))
-            ->setEmail($this->get('email'));
+            ->withName($this->get('name'))
+            ->withEmail($this->get('email'));
     }
 }

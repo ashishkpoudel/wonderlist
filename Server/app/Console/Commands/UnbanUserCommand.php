@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use App\Domain\Users\{User, Actions\UnbanUser};
+use App\Domain\Accounts\{Models\User, Actions\UnbanUser};
 
 class UnbanUserCommand extends Command
 {

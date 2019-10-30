@@ -11,13 +11,13 @@ class TagData
 
     public $name;
 
-    public function setUser(User $user)
+    public function withUser(User $user)
     {
         $this->user = $user;
         return $this;
     }
 
-    public function  setName(string $name)
+    public function withName(string $name)
     {
         $this->name = $name;
         return $this;

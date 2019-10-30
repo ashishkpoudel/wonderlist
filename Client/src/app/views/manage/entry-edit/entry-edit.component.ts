@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, HostListener, OnInit, OnChanges
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Validators } from "@angular/forms";
 
-import { Entry } from 'src/app/core';
-import { EntryService } from 'src/app/core';
+import { Entry, Media } from 'src/app/core';
+import { EntryService, MediaService } from 'src/app/core';
 
 @Component({
   selector: 'app-entry-edit',
@@ -14,6 +14,8 @@ export class EntryEditComponent implements OnInit, OnChanges {
 
   @Input()
   entry: Entry;
+
+  medias: Media[] = [];
 
   @Output()
   entrySave: EventEmitter<Entry> = new EventEmitter();
@@ -27,11 +29,13 @@ export class EntryEditComponent implements OnInit, OnChanges {
   entryForm: FormGroup = this.formBuilder.group({
     title: [null, [Validators.required]],
     body: [null, [Validators.required]],
+    media_ids: [[]]
   });
 
   constructor(
     private formBuilder: FormBuilder,
-    private entryService: EntryService
+    private entryService: EntryService,
+    private mediaService: MediaService
   ) {
   }
 
@@ -41,7 +45,7 @@ export class EntryEditComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.entry.currentValue && changes.entry.isFirstChange()) {
       const entry: Entry = changes.entry.currentValue;
-      this.entryForm.setValue({
+      this.entryForm.patchValue({
         title: entry.title,
         body: entry.body,
       });
@@ -67,9 +71,25 @@ export class EntryEditComponent implements OnInit, OnChanges {
   }
 
   cancelClick() {
-    setTimeout(() => { // fix not detecting change
+    setTimeout(() => { // fix:detecting change
       this.entryCancel.emit(this.entry);
       this.entryForm.reset();
     }, 0);
+  }
+
+  addMediaButtonClick(input: HTMLInputElement) {
+    input.click();
+    input.addEventListener('change', (event: any) => {
+      const files = event.target.files;
+      if (files.length > 0) {
+        this.mediaService.save({file: files[0], subjectId: null, subjectType: 'entries'}).subscribe(
+          data => {
+            this.medias.push(data);
+            this.entryForm.patchValue({media_ids: [data.id]});
+            input.form.reset();
+          }
+        );
+      }
+    }, {once: true});
   }
 }

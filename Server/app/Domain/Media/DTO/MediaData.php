@@ -19,31 +19,31 @@ class MediaData
     /** @var User */
     public $user;
 
-    public function setFile(UploadedFile $file)
+    public function withFile(UploadedFile $file)
     {
         $this->file = $file;
         return $this;
     }
 
-    public function setSubjectId(int $subjectId)
+    public function withSubjectId(int $subjectId)
     {
         $this->subjectId = $subjectId;
         return $this;
     }
 
-    public function setSubjectType(string $subjectType)
+    public function withSubjectType(string $subjectType)
     {
         $this->subjectType = $subjectType;
         return $this;
     }
 
-    public function setCategory(string $category)
+    public function withCategory(string $category)
     {
         $this->category = $category;
         return $this;
     }
 
-    public function setUser(User $user)
+    public function withUser(User $user)
     {
         $this->user = $user;
         return $this;

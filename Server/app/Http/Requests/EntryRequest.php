@@ -27,14 +27,16 @@ class EntryRequest extends FormRequest
         return [
             'title' => ['required'],
             'body' => ['required'],
+            'media_ids' => ['nullable', 'array']
         ];
     }
 
     public function entryData(): EntryData
     {
         return (new EntryData)
-            ->setTitle($this->input('title'))
-            ->setBody($this->input('body'))
-            ->setUser($this->user());
+            ->withTitle($this->input('title'))
+            ->withBody($this->input('body'))
+            ->withUser($this->user())
+            ->withMediaIds((array) $this->input('media_ids'));
     }
 }

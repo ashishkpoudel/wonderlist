@@ -1,8 +1,10 @@
 import { User } from './user.model';
+import { Media } from './media.model';
 
 export class Entry {
   id: number;
   user?: User;
+  media?: Media;
   title: string;
   slug: string;
   excerpt: string;
@@ -17,13 +19,11 @@ export class Entry {
     this.slug = data.slug;
     this.excerpt = data.excerpt;
     this.body = data.body;
+    if (data.user) this.user = new User(data.user);
+    if (data.media) this.media = new Media(data.media); console.log(data.media);
     this.trashed = data.trashed;
     this.created_at = data.created_at;
     this.updated_at = data.updated_at;
-
-    if (data.user) {
-      this.user = new User(data.user);
-    }
   }
 
 }

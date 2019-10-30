@@ -3,6 +3,8 @@
 namespace App\Domain\Entries\DTO;
 
 use App\Domain\Accounts\Models\User;
+use App\Domain\Media\Models\Media;
+use App\Domain\Tags\Models\Tag;
 
 class EntryData
 {
@@ -12,23 +14,45 @@ class EntryData
 
     public $user;
 
-    public $tagIds;
+    /** @var Tag[] */
+    public $tags = [];
 
-    public function setTitle(string $title)
+    /** @var Media[]  */
+    public $medias = [];
+
+    public function withTitle(string $title)
     {
         $this->title = $title;
         return $this;
     }
 
-    public function setBody(string $body)
+    public function withBody(string $body)
     {
         $this->body = $body;
         return $this;
     }
 
-    public function setUser(User $user)
+    public function withUser(User $user)
     {
         $this->user = $user;
+        return $this;
+    }
+
+    public function withTagIds(array $ids)
+    {
+        foreach ($ids as $id) {
+            $this->tags[] = Tag::find($id);
+        }
+
+        return $this;
+    }
+
+    public function withMediaIds(array $ids)
+    {
+        foreach ($ids as $id) {
+            $this->medias[] = Media::find($id);
+        }
+
         return $this;
     }
 }

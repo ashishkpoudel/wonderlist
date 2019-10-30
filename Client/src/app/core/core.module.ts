@@ -10,6 +10,7 @@ import {
   ApiService,
   EntryService,
   TagService,
+  MediaService,
   AuthGuardService,
   GlobalService,
 } from './services';
@@ -36,6 +37,7 @@ import {
     ApiService,
     EntryService,
     TagService,
+    MediaService,
     GlobalService,
     HttpQueryBuilder,
     AuthGuardService

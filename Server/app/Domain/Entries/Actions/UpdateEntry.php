@@ -10,6 +10,7 @@ class UpdateEntry
     {
         $entry->title = $entryData->title;
         $entry->body = $entryData->body;
+        $entry->media()->saveMany($entryData->medias);
         $entry->save();
 
         return $entry;

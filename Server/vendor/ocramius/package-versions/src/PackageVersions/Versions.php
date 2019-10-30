@@ -13,6 +13,13 @@ namespace PackageVersions;
 final class Versions
 {
     public const ROOT_PACKAGE_NAME = 'laravel/laravel';
+    /**
+     * Array of all available composer packages.
+     * Dont read this array from your calling code, but use the \PackageVersions\Versions::getVersion() method instead.
+     *
+     * @var array<string, string>
+     * @internal
+     */
     public const VERSIONS          = array (
   'akp/slugify' => 'dev-master@23f8d7ac8a239e3577a7907d75cd5c51651edf2c',
   'dnoegel/php-xdg-base-dir' => '0.1@265b8593498b997dc2d31e75b89f053b5cc9621a',
@@ -64,12 +71,17 @@ final class Versions
   'tijsverkoyen/css-to-inline-styles' => '2.2.1@0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757',
   'vlucas/phpdotenv' => 'v3.6.0@1bdf24f065975594f6a117f0f1f6cabf1333b156',
   'beyondcode/laravel-dump-server' => '1.3.0@fcc88fa66895f8c1ff83f6145a5eff5fa2a0739a',
+  'composer/ca-bundle' => '1.2.4@10bb96592168a0f8e8f6dcde3532d9fa50b0b527',
+  'composer/composer' => '1.9.0@314aa57fdcfc942065996f59fb73a8b3f74f3fa5',
+  'composer/semver' => '1.5.0@46d9139568ccb8d9e7cdd4539cab7347568a5e2e',
+  'composer/spdx-licenses' => '1.5.2@7ac1e6aec371357df067f8a688c3d6974df68fa5',
   'composer/xdebug-handler' => '1.3.3@46867cbf8ca9fb8d60c506895449eb799db1184f',
   'doctrine/instantiator' => '1.2.0@a2c590166b2133a4633738648b6b064edae0814a',
   'filp/whoops' => '2.5.0@cde50e6720a39fdacb240159d3eea6865d51fd96',
   'fzaninotto/faker' => 'v1.8.0@f72816b43e74063c8b10357394b6bba8cb1c10de',
   'hamcrest/hamcrest-php' => 'v2.0.0@776503d3a8e85d4f9a1148614f95b7a608b046ad',
   'jean85/pretty-package-versions' => '1.2@75c7effcf3f77501d0e0caa75111aff4daa0dd48',
+  'justinrainbow/json-schema' => '5.2.9@44c6787311242a979fa15c704327c20e7221a0e4',
   'mockery/mockery' => '1.2.4@b3453f75fd23d9fd41685f2148f4abeacabc6405',
   'myclabs/deep-copy' => '1.9.3@007c053ae6f31bba39dfa19a7726f56e9763bbea',
   'nette/bootstrap' => 'v3.0.0@e1075af05c211915e03e0c86542f3ba5433df4a3',
@@ -81,7 +93,7 @@ final class Versions
   'nette/schema' => 'v1.0.0@6241d8d4da39e825dd6cb5bfbe4242912f4d7e4d',
   'nette/utils' => 'v3.0.1@bd961f49b211997202bda1d0fbc410905be370d4',
   'nunomaduro/collision' => 'v3.0.1@af42d339fe2742295a54f6fdd42aaa6f8c4aca68',
-  'nunomaduro/larastan' => 'v0.3.21@4dca6af24373eb83aa7fcc1018495ef2680838c2',
+  'nunomaduro/larastan' => 'v0.4.3@ced5c2a216e1b7db7c27c4f1dee4c006f0b378e3',
   'ocramius/package-versions' => '1.5.1@1d32342b8c1eb27353c8887c366147b4c2da673c',
   'orchestra/testbench' => 'v3.8.5@c53429b04669b76bf764f4f8f9ba53bbe2d2a292',
   'orchestra/testbench-core' => 'v3.8.7@2122fc0c3c4e592ab142786b27d5bd6c60ca7a3c',
@@ -110,9 +122,12 @@ final class Versions
   'sebastian/recursion-context' => '3.0.0@5b0cd723502bac3b006cbf3dbf7a1e3fcefe4fa8',
   'sebastian/resource-operations' => '2.0.1@4d7a795d35b889bf80a0cc04e08d77cedfa917a9',
   'sebastian/version' => '2.0.1@99732be0ddb3361e16ad77b68ba41efc8e979019',
+  'seld/jsonlint' => '1.7.2@e2e5d290e4d2a4f0eb449f510071392e00e10d19',
+  'seld/phar-utils' => '1.0.1@7009b5139491975ef6486545a39f3e6dad5ac30a',
+  'symfony/filesystem' => 'v4.3.5@9abbb7ef96a51f4d7e69627bc6f63307994e4263',
   'theseer/tokenizer' => '1.1.3@11336f6f84e16a720dae9d8e6ed5019efa85a0f9',
   'webmozart/assert' => '1.5.0@88e6d84706d09a236046d686bbea96f07b3a34f4',
-  'laravel/laravel' => 'dev-master@ccea824651547421a4a66887a5413771dc80b7f3',
+  'laravel/laravel' => 'dev-master@48aeb2d6ce7cc37fec132086517fa06283f40eef',
 );
 
     private function __construct()
@@ -121,6 +136,8 @@ final class Versions
 
     /**
      * @throws \OutOfBoundsException If a version cannot be located.
+     *
+     * @psalm-param key-of<self::VERSIONS> $packageName
      */
     public static function getVersion(string $packageName) : string
     {
@@ -129,7 +146,7 @@ final class Versions
         }
 
         throw new \OutOfBoundsException(
-            'Required package "' . $packageName . '" is not installed: cannot detect its version'
+            'Required package "' . $packageName . '" is not installed: check your ./vendor/composer/installed.json and/or ./composer.lock files'
         );
     }
 }

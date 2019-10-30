@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Akp\Slugify\{HasSlug, SlugBuilder};
 use App\Domain\Accounts\Models\User;
+use App\Domain\Media\Models\Media;
 
 class Entry extends Model
 {
@@ -26,6 +27,11 @@ class Entry extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function media()
+    {
+        return $this->morphMany(Media::class, 'subject');
     }
 
     public function scopeOfUser($query, $user)

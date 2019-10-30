@@ -12,6 +12,7 @@ class CreateEntry
         $entry->title = $entryData->title;
         $entry->body = $entryData->body;
         $entry->user()->associate($entryData->user);
+        $entry->media()->saveMany($entryData->medias);
         $entry->save();
 
         return $entry;

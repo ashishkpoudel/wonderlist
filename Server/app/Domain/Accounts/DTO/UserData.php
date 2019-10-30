@@ -10,19 +10,19 @@ class UserData
 
     public $password;
 
-    public function setName(string $name)
+    public function withName(string $name)
     {
         $this->name = $name;
         return $this;
     }
 
-    public function setEmail(string $email)
+    public function withEmail(string $email)
     {
         $this->email = $email;
         return $this;
     }
 
-    public function setPassword(string $password)
+    public function withPassword(string $password)
     {
         $this->password = $password;
         return $this;

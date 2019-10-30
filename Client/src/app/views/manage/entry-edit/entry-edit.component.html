@@ -11,10 +11,15 @@
       <mat-form-field floatLabel="always" class="w-100">
         <textarea class="body" matInput formControlName="body" cdkTextareaAutosize placeholder="Text" #body></textarea>
       </mat-form-field>
+      <div *ngIf="medias.length" class="row">
+        <div *ngFor="let media of medias" class="col-2">
+          <img src="{{ media.path }}" class="w-100">
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-actions class="d-flex justify-content-between">
       <div>
-        <button mat-button>Media</button>
+        <button mat-button (click)="addMediaButtonClick(fileInput)"><mat-icon>insert_photo</mat-icon></button>
       </div>
       <div>
         <button mat-button (click)="cancelClick()" class="mr-1">Cancel</button>
@@ -25,3 +30,8 @@
   </mat-card>
 
 </div>
+
+<form>
+  <input type="file" style="display: none;" #fileInput>
+</form>
+

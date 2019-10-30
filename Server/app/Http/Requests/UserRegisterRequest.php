@@ -36,8 +36,8 @@ class UserRegisterRequest extends FormRequest
     public function userData(): UserData
     {
         return (new UserData)
-            ->setName($this->input('name'))
-            ->setEmail($this->input('email'))
-            ->setPassword($this->input('password'));
+            ->withName($this->input('name'))
+            ->withEmail($this->input('email'))
+            ->withPassword($this->input('password'));
     }
 }

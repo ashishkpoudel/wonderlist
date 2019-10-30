@@ -35,10 +35,10 @@ class MediaRequest extends FormRequest
     public function mediaData(): MediaData
     {
         return (new MediaData())
-            ->setFile($this->file('file'))
-            ->setSubjectId($this->get('subject_id'))
-            ->setSubjectType($this->get('subject_type'))
-            ->setCategory($this->get('category'))
-            ->setUser($this->user());
+            ->withFile($this->file('file'))
+            ->withSubjectId((int) $this->get('subject_id'))
+            ->withSubjectType($this->get('subject_type'))
+            ->withCategory($this->get('category'))
+            ->withUser($this->user());
     }
 }

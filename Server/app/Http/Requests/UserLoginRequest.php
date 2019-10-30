@@ -33,7 +33,7 @@ class UserLoginRequest extends FormRequest
     public function userData(): UserData
     {
         return (new UserData)
-            ->setEmail($this->input('email'))
-            ->setPassword($this->input('password'));
+            ->withEmail($this->input('email'))
+            ->withPassword($this->input('password'));
     }
 }

@@ -11,7 +11,9 @@ class AuthTagPolicy
     use HandlesAuthorization;
 
     const CREATE = 'create';
+
     const UPDATE = 'update';
+
     const DELETE = 'delete';
 
     public function create(User $user)
