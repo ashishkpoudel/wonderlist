@@ -1,10 +1,10 @@
 import { User } from './user.model';
 import { Media } from './media.model';
+import { Tag } from './tag.model';
 
 export class Entry {
   id: number;
   user?: User;
-  media?: Media;
   title: string;
   slug: string;
   excerpt: string;
@@ -12,18 +12,36 @@ export class Entry {
   trashed: boolean;
   created_at: string;
   updated_at: string;
+  media?: Media[] = [];
+  tags?: Tag[] = [];
 
-  constructor(data: any) {
-    this.id = data.id;
-    this.title = data.title;
-    this.slug = data.slug;
-    this.excerpt = data.excerpt;
-    this.body = data.body;
-    if (data.user) this.user = new User(data.user);
-    if (data.media) this.media = new Media(data.media); console.log(data.media);
-    this.trashed = data.trashed;
-    this.created_at = data.created_at;
-    this.updated_at = data.updated_at;
+  static fromJson(data: any) {
+    const entry = new Entry();
+    entry.id = data.id;
+    entry.title = data.title;
+    entry.slug = data.slug;
+    entry.excerpt = data.excerpt;
+    entry.body = data.body;
+    entry.trashed = data.trashed;
+    entry.created_at = data.created_at;
+    entry.updated_at = data.updated_at;
+
+    if (data.user) {
+      entry.user = new User(data.user);
+    }
+
+    if (data.media) {
+      data.media.forEach(data => {
+        entry.media.push(new Media(data));
+      });
+    }
+
+    if (data.tags) {
+      data.tags.forEach(data => {
+        entry.tags.push(new Tag(data));
+      });
+    }
+
+    return entry;
   }
-
 }

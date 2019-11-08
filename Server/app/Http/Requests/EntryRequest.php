@@ -37,6 +37,7 @@ class EntryRequest extends FormRequest
             ->withTitle($this->input('title'))
             ->withBody($this->input('body'))
             ->withUser($this->user())
+            ->withTagIds((array) $this->input('tag_ids'))
             ->withMediaIds((array) $this->input('media_ids'));
     }
 }

@@ -21,10 +21,11 @@ class EntryResource extends JsonResource
             'excerpt' => $this->excerpt(),
             'body' => $this->body,
             'user' => $this->whenLoaded('user', function(){ return UserResource::make($this->user); }),
-            'media' => MediaResource::collection($this->media),
             'trashed' => $this->trashed(),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'media' => MediaResource::collection($this->media),
+            'tags' => TagResource::collection($this->tags)
         ];
     }
 }

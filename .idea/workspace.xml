@@ -3,54 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/core.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/media.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/media.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-list/entry-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-list/entry-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Console/Commands/BanUserCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Console/Commands/BanUserCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Console/Commands/UnbanUserCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Console/Commands/UnbanUserCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Accounts/DTO/UserData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Accounts/DTO/UserData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/UpdateEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/UpdateEntry.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Models/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Models/Entry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Policies/AuthEntryPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/DTO/MediaData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Media/Policies/AuthMediaPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Media/Policies/AuthMediaPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Tags/DTO/TagData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Tags/DTO/TagData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Tags/Policies/AuthTagPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Tags/Policies/AuthTagPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/EntryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/EntryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/MediaRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/MediaRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/TagRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/TagRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserLoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserLoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserProfileRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserProfileRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/UserRegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/UserRegisterRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Server/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/extension.neon" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/extension.neon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/ApplicationResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/ApplicationResolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Console/CodeAnalyseCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Console/CodeAnalyseCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Macro.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Macro.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/Auths.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/Auths.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/BuilderDynamicWheres.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/BuilderDynamicWheres.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/Macros.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/Macros.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/ModelScopes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/Methods/Pipes/ModelScopes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/ReturnTypes/ModelExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/nunomaduro/larastan/src/ReturnTypes/ModelExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/vendor/ocramius/package-versions/src/PackageVersions/Versions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/database/migrations/2019_09_14_183624_create_entry_tag_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/migrations/2019_09_14_183624_create_entry_tag_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +29,36 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - database.sqlite" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -173,6 +169,7 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -198,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.MediaTest.user_can_upload_media">
     <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
       <method v="2" />
@@ -328,6 +325,19 @@
       <workItem from="1572358378485" duration="2286000" />
       <workItem from="1572369401015" duration="2685000" />
       <workItem from="1572379112524" duration="1558000" />
+      <workItem from="1572423443139" duration="2583000" />
+      <workItem from="1572427652221" duration="1384000" />
+      <workItem from="1572514036680" duration="2999000" />
+      <workItem from="1572579368977" duration="61000" />
+      <workItem from="1572680023091" duration="4098000" />
+      <workItem from="1572700798050" duration="3708000" />
+      <workItem from="1572774653818" duration="820000" />
+      <workItem from="1572776183024" duration="7906000" />
+      <workItem from="1572878749847" duration="669000" />
+      <workItem from="1572964989873" duration="7794000" />
+      <workItem from="1573048228730" duration="5738000" />
+      <workItem from="1573097593214" duration="46000" />
+      <workItem from="1573138783366" duration="3560000" />
     </task>
     <servers />
   </component>

@@ -6,25 +6,36 @@
     </div>
     <mat-card-content>
       <mat-form-field floatLabel="always" class="w-100">
-        <input class="title" matInput (keyup.enter)="body.focus()" formControlName="title" placeholder="Title">
+        <input class="title" matInput (keyup.enter)="body.focus()" [appFocus]="undefined === entry" formControlName="title" placeholder="Title">
       </mat-form-field>
       <mat-form-field floatLabel="always" class="w-100">
         <textarea class="body" matInput formControlName="body" cdkTextareaAutosize placeholder="Text" #body></textarea>
       </mat-form-field>
-      <div *ngIf="medias.length" class="row">
-        <div *ngFor="let media of medias" class="col-2">
-          <img src="{{ media.path }}" class="w-100">
+      <div *ngIf="entry?.media.length" class="row">
+        <div class="col-2" *ngFor="let media of entry.media">
+          <div style="position: relative;">
+            <div (click)="removeMediaClick(media)" style="position: absolute; top:0; right:0"><span style="background: #000; padding: 4px; margin: 4px; border-radius: 3px; color: #fff; cursor: pointer;">x</span></div>
+            <div>
+              <img src="{{ media.path }}" class="w-100">
+            </div>
+          </div>
         </div>
       </div>
+
+      <mat-menu #tagMenu>
+        <app-tag-menu [selectedTags]="entry.tags" [tags]="tags"></app-tag-menu>
+      </mat-menu>
+
     </mat-card-content>
     <mat-card-actions class="d-flex justify-content-between">
       <div>
-        <button mat-button (click)="addMediaButtonClick(fileInput)"><mat-icon>insert_photo</mat-icon></button>
+        <button mat-button (click)="addMediaClick(fileInput)"><mat-icon>insert_photo</mat-icon></button>
+        <button mat-button [matMenuTriggerFor]="tagMenu"><mat-icon>label</mat-icon></button>
       </div>
       <div>
         <button mat-button (click)="cancelClick()" class="mr-1">Cancel</button>
-        <button mat-flat-button *ngIf="!entry" (click)="postClick()" [disabled]="entryForm.invalid" color="primary">Post</button>
-        <button mat-flat-button *ngIf="entry" (click)="updateClick()" [disabled]="entryForm.invalid" color="primary">Update</button>
+        <button mat-flat-button *ngIf="!entry.id" (click)="postClick()" [disabled]="entryForm.invalid" color="primary">Post</button>
+        <button mat-flat-button *ngIf="entry.id" (click)="updateClick()" [disabled]="entryForm.invalid" color="primary">Update</button>
       </div>
     </mat-card-actions>
   </mat-card>

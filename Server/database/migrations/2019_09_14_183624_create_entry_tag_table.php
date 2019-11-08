@@ -19,6 +19,7 @@ class CreateEntryTagTable extends Migration
             $table->foreign('entry_id')->references('id')->on('entries')->onUpdate('cascade')->onDelete('cascade');
             $table->unsignedBigInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags')->onUpdate('cascade');
+            $table->unique(['entry_id', 'tag_id'], 'entry_tag_unique');
             $table->timestamps();
         });
     }

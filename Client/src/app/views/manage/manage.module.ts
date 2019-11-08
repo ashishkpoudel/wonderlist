@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { CoreModule } from "src/app/core";
+import { ComponentsModule } from "src/app/components/components.module";
 
 import { ManageComponent } from './manage.component';
 import { MaterialModule } from 'src/app/material.module';
@@ -65,6 +66,7 @@ const routes: Routes = [
     FormsModule,
 
     CoreModule,
+    ComponentsModule,
     MaterialModule,
   ],
   entryComponents: [

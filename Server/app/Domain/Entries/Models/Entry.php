@@ -2,12 +2,14 @@
 
 namespace App\Domain\Entries\Models;
 
+use App\Domain\Tags\Models\Tag;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Akp\Slugify\{HasSlug, SlugBuilder};
 use App\Domain\Accounts\Models\User;
 use App\Domain\Media\Models\Media;
+use App\Domain\Entries\QueryBuilders\EntryQueryBuilder;
 
 class Entry extends Model
 {
@@ -34,9 +36,9 @@ class Entry extends Model
         return $this->morphMany(Media::class, 'subject');
     }
 
-    public function scopeOfUser($query, $user)
+    public function tags()
     {
-        return $query->where('user_id', $user->id);
+        return $this->belongsToMany(Tag::class, 'entry_tag');
     }
 
     public function slugBuilder(): SlugBuilder
@@ -44,5 +46,10 @@ class Entry extends Model
         return (new SlugBuilder)
             ->from('title')
             ->to('slug');
+    }
+
+    public function newEloquentBuilder($query): EntryQueryBuilder
+    {
+        return new EntryQueryBuilder($query);
     }
 }

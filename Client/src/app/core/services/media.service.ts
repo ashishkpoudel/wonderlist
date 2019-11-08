@@ -12,7 +12,7 @@ export class MediaService {
   ) {}
 
   save(MediaParam): Observable<Media> {
-    const formData = new FormData(); console.log(MediaParam.file);
+    const formData = new FormData();
     formData.append('file', MediaParam.file);
     formData.append('subject_id', MediaParam.subjectId);
     formData.append('subject_type', MediaParam.subjectType);

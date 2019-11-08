@@ -3,8 +3,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { ApiService } from './api.service';
-import { Entry } from '../models';
-import { Pagination } from "../models";
+import { Entry, Tag, Pagination } from '../models';
 
 @Injectable()
 export class EntryService {
@@ -17,7 +16,7 @@ export class EntryService {
     return this.apiService.get('/entries', params).pipe(
       map(response => {
         return {
-          entries: response.data.map(post => new Entry(post)),
+          entries: response.data.map(post => Entry.fromJson(post)),
           pagination: new Pagination(response),
         }
       })
@@ -27,7 +26,7 @@ export class EntryService {
   get(id: number|string): Observable<Entry> {
     return this.apiService.get(`/entries/${id}`).pipe(
       map(response => {
-        return new Entry(response.data);
+        return Entry.fromJson(response.data);
       })
     );
   }
@@ -35,7 +34,7 @@ export class EntryService {
   save(data: object = {}): Observable<Entry> {
     return this.apiService.post(`/entries`, data).pipe(
       map(response => {
-        return new Entry(response.data);
+        return Entry.fromJson(response.data);
       })
     );
   }
@@ -43,7 +42,7 @@ export class EntryService {
   update(id: number|string, data: object = {}): Observable<Entry> {
     return this.apiService.patch(`/entries/${id}`, data).pipe(
       map(response => {
-        return new Entry(response.data);
+        return Entry.fromJson(response.data);
       })
     );
   }
@@ -54,5 +53,9 @@ export class EntryService {
 
   restore(id: number|string): Observable<any> {
     return this.apiService.put(`/entries/${id}/restore`, {});
+  }
+
+  attachTag(id: number|string, tag: Tag): Observable<any> {
+    return this.apiService.post(`/entries/${id}/attach-tag/${tag.id}`, {});
   }
 }

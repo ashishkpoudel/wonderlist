@@ -41,7 +41,9 @@ class EntryData
     public function withTagIds(array $ids)
     {
         foreach ($ids as $id) {
-            $this->tags[] = Tag::find($id);
+            if ($tag = Tag::find($id)) {
+                $this->tags[] = $tag;
+            }
         }
 
         return $this;
@@ -50,7 +52,9 @@ class EntryData
     public function withMediaIds(array $ids)
     {
         foreach ($ids as $id) {
-            $this->medias[] = Media::find($id);
+            if ($media = Media::find($id)) {
+                $this->medias[] = $media;
+            }
         }
 
         return $this;

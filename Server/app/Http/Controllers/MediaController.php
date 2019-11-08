@@ -37,4 +37,3 @@ class MediaController extends Controller
         return response([], 204);
     }
 }
-

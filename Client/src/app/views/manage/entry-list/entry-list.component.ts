@@ -34,7 +34,7 @@ export class EntryListComponent implements OnInit {
     if (this.activatedRoute.snapshot.url.toString() === 'trash') httpQuery.addFilter('trashed', true);
     this.entryService.getAll(httpQuery.getParams()).subscribe(
       data => {
-      this.entries = data.entries; console.log(this.entries);
+      this.entries = data.entries;
       this.entriesPagination = data.pagination;
     });
   }

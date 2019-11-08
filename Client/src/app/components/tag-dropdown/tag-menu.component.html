@@ -1,0 +1,15 @@
+<div (click)="$event.stopPropagation()" class="p-2">
+  <mat-form-field floatLabel="always" class="w-100">
+    <input matInput placeholder="Label" autocomplete="off">
+  </mat-form-field>
+
+  <div style="max-height: 200px; overflow-y: auto;">
+    <div *ngFor="let tag of tags">
+      <mat-checkbox (change)="toggleTag(tag)" [checked]="isSelected(tag)">{{ tag.name }}</mat-checkbox>
+    </div>cd
+  </div>
+
+  <div>
+
+  </div>
+</div>
