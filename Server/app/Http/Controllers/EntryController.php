@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\EntryRequest;
 use App\Http\Resources\EntryResource;
 use App\Domain\Entries\Policies\AuthEntryPolicy;
@@ -20,7 +21,7 @@ class EntryController extends Controller
 
     public function index(Request $request)
     {
-        $entries = Entry::query()->latest()->ofUser(auth()->user());
+        $entries = Entry::query()->latest()->ofUser(Auth::user());
 
         if ($request->has('filter.trashed')) {
             $entries->onlyTrashed();

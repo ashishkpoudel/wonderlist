@@ -3,22 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e5b58c3-2ec5-44d5-a83b-230eb252c810" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/models/entry.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/entry.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/core/services/media.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/core/services/media.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-edit/entry-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/entry-list/entry-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/entry-list/entry-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/app/views/manage/manage.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Actions/CreateEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/DTO/EntryData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Domain/Entries/Models/Entry.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Domain/Entries/Models/Entry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/MediaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Requests/EntryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Requests/EntryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Resources/EntryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database/migrations/2019_09_14_183624_create_entry_tag_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database/migrations/2019_09_14_183624_create_entry_tag_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Server/app/Http/Controllers/EntryController.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,6 +154,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -183,19 +174,7 @@
       <recent name="$PROJECT_DIR$/Server/app/Domain/Users/Models" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="PHPUnit.MediaTest.user_can_upload_media">
+  <component name="RunManager">
     <configuration name="MediaTest.user_can_upload_media" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MediaTest" file="$PROJECT_DIR$/Server/tests/Feature/MediaTest.php" method="user_can_upload_media" scope="Method" />
       <method v="2" />
@@ -216,6 +195,18 @@
       <TestRunner class="Tests\Feature\UserTest" file="$PROJECT_DIR$/Server/tests/Feature/UserTest.php" method="user_can_update_their_profile" scope="Method" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -337,7 +328,12 @@
       <workItem from="1572964989873" duration="7794000" />
       <workItem from="1573048228730" duration="5738000" />
       <workItem from="1573097593214" duration="46000" />
-      <workItem from="1573138783366" duration="3560000" />
+      <workItem from="1573138783366" duration="3732000" />
+      <workItem from="1573271068772" duration="503000" />
+      <workItem from="1573280496560" duration="1194000" />
+      <workItem from="1573370735253" duration="12000" />
+      <workItem from="1574957587796" duration="138000" />
+      <workItem from="1575204860120" duration="1431000" />
     </task>
     <servers />
   </component>
@@ -356,6 +352,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="278" width="424" height="491" key="FileChooserDialogImpl" timestamp="1574957723773">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="278" width="424" height="491" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1574957723773" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
